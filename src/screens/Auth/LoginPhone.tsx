@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import GoBackBtn from '../../helpers/GoBackBtn';
+import GoBackBtn from '@ui/Buttons/GoBackBtn';
 import {RH, RW} from '../../helpers/Responsive';
-import Docs from '../../helpers/TextTemporary';
+import Docs from '@helpers/Icons/TextTemporary';
 
 import {PhoneComponentProps} from './LoginScreen';
 import PhoneInput from '../../components/Login/PhoneInput';

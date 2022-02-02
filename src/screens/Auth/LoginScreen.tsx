@@ -8,7 +8,7 @@ import {
 import React from 'react';
 import BgImage from '../../assets/image/bg.png';
 import {RH, RW} from '../../helpers/Responsive';
-import MainText from '../../helpers/MainText';
+import MainText from '@helpers/Icons/MainText';
 import LoginButtons from '../../components/Login/LoginButtons';
 
 export type PhoneComponentProps = {

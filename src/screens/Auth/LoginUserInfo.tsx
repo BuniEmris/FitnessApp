@@ -1,10 +1,10 @@
 import {View, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
 import React, {useRef, useState} from 'react';
 import {RH, RW} from '../../helpers/Responsive';
-import UserIntro from '../../helpers/UserIntro';
+import UserIntro from '@helpers/Icons/UserIntro';
 import UserInfoBtn from '../../components/Login/UserInfoBtn';
-import LevelSelect from '../../helpers/LevelSelect';
-import Continue from '../../helpers/Continue';
+import LevelSelect from '@helpers/Icons/LevelSelect';
+import Continue from '@helpers/Icons/Continue';
 import BottomSheet from 'react-native-gesture-bottom-sheet';
 import {PhoneComponentProps} from './LoginScreen';
 import HeaderName from '../../components/Login/HeaderName';
