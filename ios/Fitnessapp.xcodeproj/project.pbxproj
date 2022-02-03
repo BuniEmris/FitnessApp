@@ -10,6 +10,12 @@
 		00E356F31AD99517003FC87E /* FitnessappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FitnessappTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3675BCF4185C4430B9753BFC /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2603A987DC894A7C96A829AB /* Gilroy-Light.otf */; };
+		438ED00A99AD431199A85802 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 7BF42A11D9E1428F95DE313C /* SFPRODISPLAYMEDIUM.OTF */; };
+		4DB617BC4FC949BCA016A709 /* SFPRODISPLAYBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = DCEE5882B1BA4972862E73F0 /* SFPRODISPLAYBOLD.OTF */; };
+		4E7EEA90E4C348349E181ED9 /* SFPRODISPLAYSEMIBOLDITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 5A7E8D9F8CE8491887D4EFB2 /* SFPRODISPLAYSEMIBOLDITALIC.OTF */; };
+		57AD7D604C4043C4961320A5 /* FontsFree-Net-SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 223D6B10CD3C4CEC8FDEC324 /* FontsFree-Net-SFProDisplay-Regular.ttf */; };
+		5C535C8DD039433B9164EFC5 /* SFPRODISPLAYHEAVYITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = FE87C5CF9CE04049AA1FD12C /* SFPRODISPLAYHEAVYITALIC.OTF */; };
 		5DE04FFD27A1ADAF00E632F6 /* Gilroy-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62AAE7F109694F949233FC36 /* Gilroy-Black.ttf */; };
 		5DE04FFE27A1ADAF00E632F6 /* Gilroy-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A24F2257ED140F2858B876B /* Gilroy-BlackItalic.ttf */; };
 		5DE04FFF27A1ADAF00E632F6 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5860FF24559345979FC51EDC /* Gilroy-Bold.ttf */; };
@@ -30,20 +36,14 @@
 		5DE0500E27A1ADAF00E632F6 /* Gilroy-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7120FF98AFD44AAE9D128761 /* Gilroy-ThinItalic.ttf */; };
 		5DE0500F27A1ADAF00E632F6 /* Gilroy-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25BFB0A13DD541F7B03386EB /* Gilroy-UltraLight.ttf */; };
 		5DE0501027A1ADAF00E632F6 /* Gilroy-UltraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FA28AE034EA44AB8537ADA3 /* Gilroy-UltraLightItalic.ttf */; };
-		9B61F876FC69AE651E3202F2 /* libPods-Fitnessapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E332DB2453EE3F62F1F9B9C1 /* libPods-Fitnessapp.a */; };
-		C08D4E2CEE32ECE8EF1BAABD /* libPods-Fitnessapp-FitnessappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FB721F2909CCE318310E12 /* libPods-Fitnessapp-FitnessappTests.a */; };
-		57AD7D604C4043C4961320A5 /* FontsFree-Net-SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 223D6B10CD3C4CEC8FDEC324 /* FontsFree-Net-SFProDisplay-Regular.ttf */; };
-		C8643E6F3D99429E8BD737CD /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7601E7F8834347F8B350A120 /* Gilroy-ExtraBold.otf */; };
-		3675BCF4185C4430B9753BFC /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2603A987DC894A7C96A829AB /* Gilroy-Light.otf */; };
-		9F71A4D5459E47068D3FB259 /* SFPRODISPLAYBLACKITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 8DA3D86D39F9407993C60EFD /* SFPRODISPLAYBLACKITALIC.OTF */; };
-		4DB617BC4FC949BCA016A709 /* SFPRODISPLAYBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = DCEE5882B1BA4972862E73F0 /* SFPRODISPLAYBOLD.OTF */; };
-		5C535C8DD039433B9164EFC5 /* SFPRODISPLAYHEAVYITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = FE87C5CF9CE04049AA1FD12C /* SFPRODISPLAYHEAVYITALIC.OTF */; };
 		77E4BDD7C9EA48F6A064988F /* SFPRODISPLAYLIGHTITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 3996224466F04D1980D7428C /* SFPRODISPLAYLIGHTITALIC.OTF */; };
-		438ED00A99AD431199A85802 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 7BF42A11D9E1428F95DE313C /* SFPRODISPLAYMEDIUM.OTF */; };
-		9140F598BEBB4955B18C519F /* SFPRODISPLAYREGULAR.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 843F09B93D8340A68670D967 /* SFPRODISPLAYREGULAR.OTF */; };
-		4E7EEA90E4C348349E181ED9 /* SFPRODISPLAYSEMIBOLDITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 5A7E8D9F8CE8491887D4EFB2 /* SFPRODISPLAYSEMIBOLDITALIC.OTF */; };
-		9E6615E5AC9B4D5A8D969452 /* SFPRODISPLAYTHINITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 841461BBB3994BF8AA6F3D2B /* SFPRODISPLAYTHINITALIC.OTF */; };
 		8281C6A03D044F4EAEDAE12F /* SFPRODISPLAYULTRALIGHTITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 12D6289D1E6243C59E3C5489 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */; };
+		9140F598BEBB4955B18C519F /* SFPRODISPLAYREGULAR.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 843F09B93D8340A68670D967 /* SFPRODISPLAYREGULAR.OTF */; };
+		9B61F876FC69AE651E3202F2 /* libPods-Fitnessapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E332DB2453EE3F62F1F9B9C1 /* libPods-Fitnessapp.a */; };
+		9E6615E5AC9B4D5A8D969452 /* SFPRODISPLAYTHINITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 841461BBB3994BF8AA6F3D2B /* SFPRODISPLAYTHINITALIC.OTF */; };
+		9F71A4D5459E47068D3FB259 /* SFPRODISPLAYBLACKITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 8DA3D86D39F9407993C60EFD /* SFPRODISPLAYBLACKITALIC.OTF */; };
+		C08D4E2CEE32ECE8EF1BAABD /* libPods-Fitnessapp-FitnessappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FB721F2909CCE318310E12 /* libPods-Fitnessapp-FitnessappTests.a */; };
+		C8643E6F3D99429E8BD737CD /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7601E7F8834347F8B350A120 /* Gilroy-ExtraBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +77,7 @@
 		06572062C4B5B3197BAF4882 /* Pods-Fitnessapp-FitnessappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitnessapp-FitnessappTests.release.xcconfig"; path = "Target Support Files/Pods-Fitnessapp-FitnessappTests/Pods-Fitnessapp-FitnessappTests.release.xcconfig"; sourceTree = "<group>"; };
 		0BA4255F85654E30A79F245A /* Gilroy-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-MediumItalic.ttf"; path = "../src/assets/fonts/Gilroy-MediumItalic.ttf"; sourceTree = "<group>"; };
 		0FA28AE034EA44AB8537ADA3 /* Gilroy-UltraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-UltraLightItalic.ttf"; path = "../src/assets/fonts/Gilroy-UltraLightItalic.ttf"; sourceTree = "<group>"; };
+		12D6289D1E6243C59E3C5489 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SFPRODISPLAYULTRALIGHTITALIC.OTF; path = ../src/assets/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Fitnessapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitnessapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Fitnessapp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Fitnessapp/AppDelegate.m; sourceTree = "<group>"; };
@@ -86,41 +87,40 @@
 		1A24F2257ED140F2858B876B /* Gilroy-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-BlackItalic.ttf"; path = "../src/assets/fonts/Gilroy-BlackItalic.ttf"; sourceTree = "<group>"; };
 		1E1886CCA6D843F6B34FD185 /* Gilroy-RegularItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-RegularItalic.ttf"; path = "../src/assets/fonts/Gilroy-RegularItalic.ttf"; sourceTree = "<group>"; };
 		2018CD206F4D3804494CE087 /* Pods-Fitnessapp-FitnessappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitnessapp-FitnessappTests.debug.xcconfig"; path = "Target Support Files/Pods-Fitnessapp-FitnessappTests/Pods-Fitnessapp-FitnessappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		223D6B10CD3C4CEC8FDEC324 /* FontsFree-Net-SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FontsFree-Net-SFProDisplay-Regular.ttf"; path = "../src/assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		25BFB0A13DD541F7B03386EB /* Gilroy-UltraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-UltraLight.ttf"; path = "../src/assets/fonts/Gilroy-UltraLight.ttf"; sourceTree = "<group>"; };
+		2603A987DC894A7C96A829AB /* Gilroy-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Light.otf"; path = "../src/assets/fonts/Gilroy-Light.otf"; sourceTree = "<group>"; };
 		2ADA422787CC4FFF968C9EBD /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-SemiBold.ttf"; path = "../src/assets/fonts/Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
+		3996224466F04D1980D7428C /* SFPRODISPLAYLIGHTITALIC.OTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SFPRODISPLAYLIGHTITALIC.OTF; path = ../src/assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF; sourceTree = "<group>"; };
 		4460D607441D406EA5018CA1 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Light.ttf"; path = "../src/assets/fonts/Gilroy-Light.ttf"; sourceTree = "<group>"; };
 		48E67BC3B15E420593872342 /* Gilroy-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Gilroy-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		51E462EAA51C467995BB278B /* Gilroy-HeavyItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-HeavyItalic.ttf"; path = "../src/assets/fonts/Gilroy-HeavyItalic.ttf"; sourceTree = "<group>"; };
 		5860FF24559345979FC51EDC /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Bold.ttf"; path = "../src/assets/fonts/Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		5A7E8D9F8CE8491887D4EFB2 /* SFPRODISPLAYSEMIBOLDITALIC.OTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SFPRODISPLAYSEMIBOLDITALIC.OTF; path = ../src/assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF; sourceTree = "<group>"; };
 		5D3F0F9C27A175150040293C /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		62AAE7F109694F949233FC36 /* Gilroy-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Black.ttf"; path = "../src/assets/fonts/Gilroy-Black.ttf"; sourceTree = "<group>"; };
 		69FB721F2909CCE318310E12 /* libPods-Fitnessapp-FitnessappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fitnessapp-FitnessappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		705ADDFB99E1425096F5B71B /* Gilroy-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-BoldItalic.ttf"; path = "../src/assets/fonts/Gilroy-BoldItalic.ttf"; sourceTree = "<group>"; };
 		7120FF98AFD44AAE9D128761 /* Gilroy-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-ThinItalic.ttf"; path = "../src/assets/fonts/Gilroy-ThinItalic.ttf"; sourceTree = "<group>"; };
 		71726B0B53E3410E953E9C4C /* Gilroy-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Thin.ttf"; path = "../src/assets/fonts/Gilroy-Thin.ttf"; sourceTree = "<group>"; };
+		7601E7F8834347F8B350A120 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-ExtraBold.otf"; path = "../src/assets/fonts/Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
+		7BF42A11D9E1428F95DE313C /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SFPRODISPLAYMEDIUM.OTF; path = ../src/assets/fonts/SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
 		7CDEB7FD509A4F5EAA7E3457 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Medium.ttf"; path = "../src/assets/fonts/Gilroy-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Fitnessapp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		841461BBB3994BF8AA6F3D2B /* SFPRODISPLAYTHINITALIC.OTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SFPRODISPLAYTHINITALIC.OTF; path = ../src/assets/fonts/SFPRODISPLAYTHINITALIC.OTF; sourceTree = "<group>"; };
+		843F09B93D8340A68670D967 /* SFPRODISPLAYREGULAR.OTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SFPRODISPLAYREGULAR.OTF; path = ../src/assets/fonts/SFPRODISPLAYREGULAR.OTF; sourceTree = "<group>"; };
 		862B95A44BF146D29C5FC700 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Regular.ttf"; path = "../src/assets/fonts/Gilroy-Regular.ttf"; sourceTree = "<group>"; };
 		86A7B9B2264D4CC1B1B94C4A /* Gilroy-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-LightItalic.ttf"; path = "../src/assets/fonts/Gilroy-LightItalic.ttf"; sourceTree = "<group>"; };
+		8DA3D86D39F9407993C60EFD /* SFPRODISPLAYBLACKITALIC.OTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SFPRODISPLAYBLACKITALIC.OTF; path = ../src/assets/fonts/SFPRODISPLAYBLACKITALIC.OTF; sourceTree = "<group>"; };
 		A4EF47A3113C4EE98BF263B7 /* Gilroy-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Gilroy-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		B801A9FFDA9A4AD1B52243EB /* Gilroy-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-ExtraBold.ttf"; path = "../src/assets/fonts/Gilroy-ExtraBold.ttf"; sourceTree = "<group>"; };
 		BB4917FBC2164CFF958A9BAB /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Heavy.ttf"; path = "../src/assets/fonts/Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
 		BFFD94C72A88148CC8F35AA1 /* Pods-Fitnessapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitnessapp.debug.xcconfig"; path = "Target Support Files/Pods-Fitnessapp/Pods-Fitnessapp.debug.xcconfig"; sourceTree = "<group>"; };
+		DCEE5882B1BA4972862E73F0 /* SFPRODISPLAYBOLD.OTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SFPRODISPLAYBOLD.OTF; path = ../src/assets/fonts/SFPRODISPLAYBOLD.OTF; sourceTree = "<group>"; };
 		E332DB2453EE3F62F1F9B9C1 /* libPods-Fitnessapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fitnessapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EEE079DCC56460C5F11EBBED /* Pods-Fitnessapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitnessapp.release.xcconfig"; path = "Target Support Files/Pods-Fitnessapp/Pods-Fitnessapp.release.xcconfig"; sourceTree = "<group>"; };
-		223D6B10CD3C4CEC8FDEC324 /* FontsFree-Net-SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; name = "FontsFree-Net-SFProDisplay-Regular.ttf"; path = "../src/assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7601E7F8834347F8B350A120 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; name = "Gilroy-ExtraBold.otf"; path = "../src/assets/fonts/Gilroy-ExtraBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2603A987DC894A7C96A829AB /* Gilroy-Light.otf */ = {isa = PBXFileReference; name = "Gilroy-Light.otf"; path = "../src/assets/fonts/Gilroy-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8DA3D86D39F9407993C60EFD /* SFPRODISPLAYBLACKITALIC.OTF */ = {isa = PBXFileReference; name = "SFPRODISPLAYBLACKITALIC.OTF"; path = "../src/assets/fonts/SFPRODISPLAYBLACKITALIC.OTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DCEE5882B1BA4972862E73F0 /* SFPRODISPLAYBOLD.OTF */ = {isa = PBXFileReference; name = "SFPRODISPLAYBOLD.OTF"; path = "../src/assets/fonts/SFPRODISPLAYBOLD.OTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FE87C5CF9CE04049AA1FD12C /* SFPRODISPLAYHEAVYITALIC.OTF */ = {isa = PBXFileReference; name = "SFPRODISPLAYHEAVYITALIC.OTF"; path = "../src/assets/fonts/SFPRODISPLAYHEAVYITALIC.OTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3996224466F04D1980D7428C /* SFPRODISPLAYLIGHTITALIC.OTF */ = {isa = PBXFileReference; name = "SFPRODISPLAYLIGHTITALIC.OTF"; path = "../src/assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7BF42A11D9E1428F95DE313C /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; name = "SFPRODISPLAYMEDIUM.OTF"; path = "../src/assets/fonts/SFPRODISPLAYMEDIUM.OTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		843F09B93D8340A68670D967 /* SFPRODISPLAYREGULAR.OTF */ = {isa = PBXFileReference; name = "SFPRODISPLAYREGULAR.OTF"; path = "../src/assets/fonts/SFPRODISPLAYREGULAR.OTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5A7E8D9F8CE8491887D4EFB2 /* SFPRODISPLAYSEMIBOLDITALIC.OTF */ = {isa = PBXFileReference; name = "SFPRODISPLAYSEMIBOLDITALIC.OTF"; path = "../src/assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		841461BBB3994BF8AA6F3D2B /* SFPRODISPLAYTHINITALIC.OTF */ = {isa = PBXFileReference; name = "SFPRODISPLAYTHINITALIC.OTF"; path = "../src/assets/fonts/SFPRODISPLAYTHINITALIC.OTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		12D6289D1E6243C59E3C5489 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */ = {isa = PBXFileReference; name = "SFPRODISPLAYULTRALIGHTITALIC.OTF"; path = "../src/assets/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FE87C5CF9CE04049AA1FD12C /* SFPRODISPLAYHEAVYITALIC.OTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SFPRODISPLAYHEAVYITALIC.OTF; path = ../src/assets/fonts/SFPRODISPLAYHEAVYITALIC.OTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -664,6 +664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MC7XQCZV87;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Fitnessapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -675,7 +676,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.innetech.fitness;
 				PRODUCT_NAME = Fitnessapp;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -690,6 +691,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MC7XQCZV87;
 				INFOPLIST_FILE = Fitnessapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -700,7 +702,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.innetech.fitness;
 				PRODUCT_NAME = Fitnessapp;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
