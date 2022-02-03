@@ -4,11 +4,12 @@
 
 import { AppRegistry } from 'react-native'
 import App from './src/App'
+import React from 'react'
 import { name as appName } from './app.json'
 import { SafeAreaProvider } from 'react-native-safe-area-context/src/SafeAreaContext'
-import { Provider } from 'react-redux'
-import store from '@store'
 import { Colors } from '@styles/index'
+import store from './src/store/store'
+import { Provider } from 'react-redux'
 
 const BaseApp = () => {
   return (
