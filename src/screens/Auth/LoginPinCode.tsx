@@ -1,9 +1,9 @@
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React, {useState, useRef} from 'react';
 import {RH, RW} from '../../helpers/Responsive';
-import GoBackBtn from '../../helpers/GoBackBtn';
-import PhoneNo from '../../helpers/PhoneText';
-import SmsSend from '../../helpers/SmsSend';
+import GoBackBtn from '@ui/Buttons/GoBackBtn';
+import PhoneNo from '@helpers/Icons/PhoneText';
+import SmsSend from '@helpers/Icons/SmsSend';
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
 import {PhoneComponentProps} from './LoginScreen';
 import SendSms from '../../components/Login/SendSms';

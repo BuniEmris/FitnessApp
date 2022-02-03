@@ -8,14 +8,14 @@ import {
 import React, {useState} from 'react';
 import {RH, RW} from '../../helpers/Responsive';
 import SwitchSelector from 'react-native-switch-selector';
-import Introduction from '../../helpers/Introduction';
-import Products from '../../helpers/Products';
-import Continue from '../../helpers/Continue';
+import Introduction from '@helpers/Icons/Introduction';
+import Products from '@helpers/Icons/Products';
+import Continue from '@helpers/Icons/Continue';
 import {PhoneComponentProps} from './LoginScreen';
 import HeaderName from '../../components/Login/HeaderName';
 import MySwitchSelector from '../../components/Login/MySwitchSelector';
 import NameInput from '../../components/Login/NameInput';
-import ContinueBtn from '../../helpers/ContinueBtn';
+import ContinueBtn from '@ui/Buttons/ContinueBtn';
 export default function LoginName({navigation}: PhoneComponentProps) {
   return (
     <View style={styles.container}>

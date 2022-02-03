@@ -4,7 +4,7 @@ import {RH, RW} from '../../helpers/Responsive';
 import {TextInputMask} from 'react-native-masked-text';
 import VirtualKeyboard from 'react-native-virtual-keyboard';
 import {PhoneComponentProps} from '../../screens/Auth/LoginScreen';
-import NextBtn from '../../helpers/NextBtn';
+import NextBtn from '@helpers/Icons/NextBtn';
 
 export default function PhoneInput({navigation}: PhoneComponentProps) {
   const [phoneInput, setPhoneInput] = useState('');

@@ -1,57 +1,38 @@
-import React, {useState} from 'react';
+import React from 'react'
+import { SafeAreaView, StyleSheet, View } from 'react-native'
+
 import {
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  useColorScheme,
-  View,
-} from 'react-native';
+  NavigationContainer,
+  NavigationContainerRef,
+  ParamListBase,
+} from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { StackParamList } from '@routes/stackParams'
+import { Colors } from '@styles/index'
+import { RoutesScreens, ScreenProps } from '@routes/routes'
 
-import {NavigationContainer} from '@react-navigation/native';
-import LoginScreen from './screens/Auth/LoginScreen';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import LoginPhone from './screens/Auth/LoginPhone';
-import LoginPinCode from './screens/Auth/LoginPinCode';
-import LoginName from './screens/Auth/LoginName';
-import LoginUserInfo from './screens/Auth/LoginUserInfo';
-const Stack = createNativeStackNavigator();
+export const Stack = createNativeStackNavigator<StackParamList>()
+export let NavigationRef = React.createRef<NavigationContainerRef<ParamListBase>>()
+
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-  // const [isLogged, setIsLogged] = useState(false);
-
-  // const routeNavigator = () => {
-  //   switch (isLogged) {
-  //     case true: {
-  //       return <TabNavigator />;
-  //     }
-  //     case false: {
-  //       return <AuthStack />;
-  //     }
-  //   }
-  // };
   return (
     <SafeAreaView style={styles.wrapper}>
-      <StatusBar
-        translucent
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-      />
       <View style={styles.container}>
-        <NavigationContainer>
+        <NavigationContainer ref={NavigationRef}>
           <Stack.Navigator
             screenOptions={{
-              headerShown: false,
+              animation: 'simple_push',
+              contentStyle: { backgroundColor: Colors.WHITE },
             }}>
-            <Stack.Screen name="login" component={LoginScreen} />
-            <Stack.Screen name="auth-phone" component={LoginPhone} />
-            <Stack.Screen name="auth-pincode" component={LoginPinCode} />
-            <Stack.Screen name="name" component={LoginName} />
-            <Stack.Screen name="user-info" component={LoginUserInfo} />
+            {RoutesScreens.map((screen: ScreenProps) => (
+              <Stack.Screen key={screen.name} {...screen} />
+            ))}
           </Stack.Navigator>
         </NavigationContainer>
       </View>
     </SafeAreaView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -61,6 +42,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-});
+})
 
-export default App;
+export default App

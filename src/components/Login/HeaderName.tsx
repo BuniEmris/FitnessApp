@@ -1,8 +1,8 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
-import GoBackBtn from '../../helpers/GoBackBtn';
+import GoBackBtn from '@ui/Buttons/GoBackBtn';
 import {PhoneComponentProps} from '../../screens/Auth/LoginScreen';
-import Skip from '../../helpers/Skip';
+import Skip from '@helpers/Icons/Skip';
 
 type IOwnProps = {
   navigation: any;

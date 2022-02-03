@@ -1,8 +1,8 @@
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import DatePicker from 'react-native-date-picker';
-import DoB from '../../../helpers/DoB';
-import Done from '../../../helpers/Done';
+import DoB from '@helpers/Icons/DoB';
+import Done from '@helpers/Icons/Done';
 import {RH} from '../../../helpers/Responsive';
 
 type OwnProps = {

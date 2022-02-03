@@ -7,8 +7,8 @@ import {
 } from 'react-native';
 import React from 'react';
 import {RH, RW} from '../../../helpers/Responsive';
-import UserHeightText from '../../../helpers/UserHeightText';
-import Done from '../../../helpers/Done';
+import UserHeightText from '@helpers/Icons/UserHeightText';
+import Done from '@helpers/Icons/Done';
 import RNListSlider from 'react-native-list-slider';
 import LinearGradient from 'react-native-linear-gradient';
 type OwnProps = {

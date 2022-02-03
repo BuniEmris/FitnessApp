@@ -9,8 +9,41 @@
     "moduleResolution": "node",
     "noEmit": true,
     "strict": true,
-    "target": "esnext"
-  },
+    "target": "esnext",
+    "module": "commonjs", //esnext
+    "baseUrl": ".",
+    "skipLibCheck": true,                    /* Skip type checking of declaration files. */
+    "resolveJsonModule": true,               /* Allows importing modules with a ‘.json’ extension, which is a common practice in node projects. */
+    "forceConsistentCasingInFileNames": true,
+    "types": ["jest"],
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@hooks/*": ["./src/hooks/*"],
+      "@ui/*": ["./src/components/ui/*"],
+      "@components/*": ["./src/components/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@selectors/*": ["./src/store/selectors/*"],
+      "@reducers/*": ["./src/store/reducers/*"],
+      "@actions/*": ["./src/store/actions/*"],
+      "@store": ["./src/store/store"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@apptypes/*": ["./src/types/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@api/*": ["./src/api/*"],
+      "@app": ["./src/App"],
+      "@mocks/*": ["./src/mocks/*"],
+      "@database/*": ["./src/database/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@configs/*": ["./src/config/*"],
+      "@json/*": ["./src/json/*"]
+    },
+    "include": ["src/**/*"]
+},
   "exclude": [
     "node_modules",
     "babel.config.js",
