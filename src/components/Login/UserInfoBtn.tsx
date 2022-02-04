@@ -1,16 +1,16 @@
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import React from 'react';
-import {RH, RW} from '../../helpers/Responsive';
-import NextIcon from '../../assets/Icons/NextIcon';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import React from 'react'
+import { RH, RW } from '../../helpers/Responsive'
+import NextIcon from '../../assets/Icons/NextIcon'
 type IbtnInfoProps = {
-  name: string;
-  value: any;
-  sm: boolean;
-  kg: boolean;
-  textValue: string;
-  bottomSheet: any;
-  setStep: any;
-};
+  name: string
+  value: any
+  sm: boolean
+  kg: boolean
+  textValue: string
+  bottomSheet: any
+  setStep: any
+}
 export default function UserInfoBtn({
   name,
   value,
@@ -24,15 +24,15 @@ export default function UserInfoBtn({
     <TouchableOpacity
       onPress={() => {
         if (name === 'Возраст') {
-          setStep(1);
+          setStep(1)
         } else if (name === 'Рост') {
-          setStep(2);
+          setStep(2)
         } else if (name === 'Текущий вес') {
-          setStep(3);
+          setStep(3)
         } else {
-          setStep(4);
+          setStep(4)
         }
-        bottomSheet.current.show();
+        bottomSheet.current?.show()
       }}
       style={styles.container}>
       <Text style={styles.name}>{name}</Text>
@@ -54,7 +54,7 @@ export default function UserInfoBtn({
         <NextIcon />
       </View>
     </TouchableOpacity>
-  );
+  )
 }
 const styles = StyleSheet.create({
   container: {
@@ -93,4 +93,4 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     marginBottom: RH(30),
   },
-});
+})

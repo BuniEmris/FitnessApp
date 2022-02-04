@@ -1,30 +1,31 @@
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
-import React, {useState, useRef} from 'react';
-import {RH, RW} from '../../helpers/Responsive';
-import GoBackBtn from '@ui/Buttons/GoBackBtn';
-import PhoneNo from '@helpers/Icons/PhoneText';
-import SmsSend from '@helpers/Icons/SmsSend';
-import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
-import {PhoneComponentProps} from './LoginScreen';
-import SendSms from '../../components/Login/SendSms';
-import ValidationText from '../../components/Login/ValidationText';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import React, { useState, useRef } from 'react'
+import { RH, RW } from '../../helpers/Responsive'
+import GoBackBtn from '@ui/Buttons/GoBackBtn'
+import PhoneNo from '@helpers/Icons/PhoneText'
+import SmsSend from '@helpers/Icons/SmsSend'
+import SmoothPinCodeInput from 'react-native-smooth-pincode-input'
+import { PhoneComponentProps } from './LoginScreen'
+import SendSms from '../../components/Login/SendSms'
+import ValidationText from '../../components/Login/ValidationText'
+import { SCREENS } from '@routes/navigations.types'
 
-export default function LoginPinCode({navigation}: PhoneComponentProps) {
-  const [pincodeValue, setPincodeValue] = useState('');
-  const [showErrorPin, setShowErrorPin] = useState(false);
-  const pinRef = useRef(null);
-  const handleNextStep = () => navigation.navigate('name');
+export default function LoginPinCode({ navigation }: PhoneComponentProps) {
+  const [pincodeValue, setPincodeValue] = useState('')
+  const [showErrorPin, setShowErrorPin] = useState(false)
+  const pinRef = useRef(null)
+  const handleNextStep = () => navigation.navigate(SCREENS.AUTH_NAME)
   const handlingCode = (val: string) => {
-    setPincodeValue(val);
+    setPincodeValue(val)
     if (val === '1234') {
-      handleNextStep();
+      handleNextStep()
     } else {
-      setShowErrorPin(true);
+      setShowErrorPin(true)
     }
-  };
+  }
   return (
     <View style={styles.container}>
-      <View style={{marginTop: 20}}>
+      <View style={{ marginTop: 20 }}>
         <GoBackBtn navigation={navigation} infoColor={false} />
       </View>
       <Text style={styles.verificationTxt}>Верификация</Text>
@@ -43,7 +44,7 @@ export default function LoginPinCode({navigation}: PhoneComponentProps) {
       {showErrorPin && <ValidationText />}
       <SendSms />
     </View>
-  );
+  )
 }
 const styles = StyleSheet.create({
   container: {
@@ -94,4 +95,4 @@ const styles = StyleSheet.create({
     lineHeight: RH(30),
     color: '#333333',
   },
-});
+})

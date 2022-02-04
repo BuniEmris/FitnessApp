@@ -143,6 +143,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode buildCode
         versionName buildName
+         vectorDrawables.useSupportLibrary = true
     }
     splits {
         abi {

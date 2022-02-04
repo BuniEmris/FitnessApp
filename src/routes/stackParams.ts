@@ -10,4 +10,6 @@ export type StackParamList = {
   [SCREENS.AUTH_CODE]: undefined
   [SCREENS.AUTH_LOGIN]: undefined
   [SCREENS.AUTH_PHONE]: undefined
+  [SCREENS.USER_INFO]: undefined
+  [SCREENS.USER_IMG]: undefined
 }

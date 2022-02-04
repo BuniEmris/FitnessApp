@@ -1,22 +1,19 @@
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
-import React from 'react';
-import {PhoneComponentProps} from '@screens/Auth/LoginScreen';
-import {RH, RW} from '@helpers/Responsive';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import React from 'react'
+import { PhoneComponentProps } from '@screens/Auth/LoginScreen'
+import { RH, RW } from '@helpers/Responsive'
+import { NavigationContainer } from '@react-navigation/native'
 
-export default function ContinueBtn({navigation}: PhoneComponentProps) {
-
-
-
-
+export default function ContinueBtn({ navigation, address }: any) {
   return (
     <TouchableOpacity
       onPress={() => {
-        navigation.navigate('user-info');
+        navigation.navigate(address)
       }}
       style={styles.next}>
       <Text style={styles.nextText}>Продолжить</Text>
     </TouchableOpacity>
-  );
+  )
 }
 const styles = StyleSheet.create({
   next: {
@@ -35,4 +32,4 @@ const styles = StyleSheet.create({
     lineHeight: RH(22),
     alignSelf: 'center',
   },
-});
+})

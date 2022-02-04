@@ -37,6 +37,7 @@
 			</dict>
 		</dict>
 	</dict>
+
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UIAppFonts</key>
@@ -54,6 +55,10 @@
 		<string>SFPRODISPLAYTHINITALIC.OTF</string>
 		<string>SFPRODISPLAYULTRALIGHTITALIC.OTF</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Fitness requires access to your phone`s camera .</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Fitness requires access to your phone`s Gallery .</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
