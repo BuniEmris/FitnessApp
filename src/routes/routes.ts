@@ -10,6 +10,7 @@ import LoginPinCode from '@screens/Auth/LoginPinCode'
 import LoginName from '@screens/Auth/LoginName'
 import LoginUserInfo from '@screens/Auth/LoginUserInfo'
 import LoginUserImg from '@screens/Auth/LoginUserImg'
+import AllergyList from '@screens/Auth/AllergyList'
 
 export type ScreenProps = Parameters<typeof Stack['Screen']>[number]
 
@@ -52,6 +53,13 @@ export const RoutesScreens: (ScreenProps & { name: string })[] = [
   {
     name: SCREENS.USER_IMG,
     component: LoginUserImg,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: SCREENS.ALLERGIC_PRODUCTS,
+    component: AllergyList,
     options: {
       headerShown: false,
     },

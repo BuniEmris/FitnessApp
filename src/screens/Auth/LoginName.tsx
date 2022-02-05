@@ -21,9 +21,11 @@ export default function LoginName({ navigation }: PhoneComponentProps) {
       </View>
       <MySwitchSelector />
       <NameInput />
-      <View style={styles.products}>
+      <TouchableOpacity
+        // onPress={() => navigation.navigate(SCREENS.ALLERGIC_PRODUCTS)}
+        style={styles.products}>
         <Products />
-      </View>
+      </TouchableOpacity>
       <ContinueBtn navigation={navigation} address={ToUserScreen} />
     </View>
   )

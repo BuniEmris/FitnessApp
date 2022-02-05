@@ -12,6 +12,7 @@ import UserDoB from '../../components/Login/UserInfo/UserDoB'
 import UserHeight from '../../components/Login/UserInfo/UserHeight'
 import UserWeight from '@components/Login/UserInfo/UserWeight'
 import { SCREENS } from '@routes/navigations.types'
+import ActivityLevel from '@components/Login/UserInfo/ActivityLevel'
 
 export default function LoginUserInfo({ navigation }: PhoneComponentProps) {
   const bottomSheet = useRef()
@@ -71,7 +72,7 @@ export default function LoginUserInfo({ navigation }: PhoneComponentProps) {
           {step === 3 && <UserWeight />}
         </BottomSheet>
         <View style={{ marginVertical: 32 }}>
-          <LevelSelect />
+          <ActivityLevel />
         </View>
         <TouchableOpacity
           onPress={() => {

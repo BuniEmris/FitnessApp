@@ -23,34 +23,38 @@ export default function LoginUserImg({ navigation }: PhoneComponentProps) {
         <UserImgTxt />
       </View>
       <View style={styles.bodyWrapper}>
-        <TouchableOpacity
-          onPress={() => {
-            ImagePicker.openPicker({
-              width: 300,
-              height: 300,
-              cropping: true,
-              freeStyleCropEnabled: true,
-            })
-              .then(images => {
-                setlocalFileImg(images)
-              })
-              .catch(error => {
-                console.log('error', error)
-              })
-          }}
-          style={styles.addImgContainer}>
-          {localFileImg ? (
-            <Image
-              width={200}
-              height={200}
-              style={styles.addImgContainer}
-              resizeMode="contain"
-              source={localFileImg.path}
-            />
-          ) : (
-            <AddImg />
-          )}
-        </TouchableOpacity>
+        <View style={styles.bgCircle1}>
+          <View style={styles.bgCircle2}>
+            <TouchableOpacity
+              onPress={() => {
+                ImagePicker.openPicker({
+                  width: 300,
+                  height: 300,
+                  cropping: true,
+                  freeStyleCropEnabled: true,
+                })
+                  .then(images => {
+                    setlocalFileImg(images)
+                  })
+                  .catch(error => {
+                    console.log('error', error)
+                  })
+              }}
+              style={styles.addImgContainer}>
+              {localFileImg ? (
+                <Image
+                  width={200}
+                  height={200}
+                  style={styles.addImgContainer}
+                  resizeMode="contain"
+                  source={{ uri: localFileImg?.path }}
+                />
+              ) : (
+                <AddImg />
+              )}
+            </TouchableOpacity>
+          </View>
+        </View>
         <ContinueBtn navigation={navigation} address={navAddress} />
       </View>
     </View>
