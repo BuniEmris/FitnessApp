@@ -1,21 +1,15 @@
-import {
-  View,
-  Text,
-  ImageBackground,
-  TouchableOpacity,
-  StyleSheet,
-} from 'react-native';
-import React from 'react';
-import BgImage from '../../assets/image/bg.png';
-import {RH, RW} from '../../helpers/Responsive';
-import MainText from '@helpers/Icons/MainText';
-import LoginButtons from '../../components/Login/LoginButtons';
+import { View, Text, ImageBackground, TouchableOpacity, StyleSheet } from 'react-native'
+import React from 'react'
+import BgImage from '../../assets/image/bg.png'
+import { RH, RW } from '../../helpers/Responsive'
+import MainText from '@helpers/Icons/MainText'
+import LoginButtons from '../../components/Login/LoginButtons'
 
 export type PhoneComponentProps = {
-  navigation: any;
-};
+  navigation: any
+}
 
-export default function LoginScreen({navigation}: PhoneComponentProps) {
+export default function LoginScreen({ navigation }: PhoneComponentProps) {
   return (
     <ImageBackground source={BgImage} resizeMode="cover" style={styles.imageBg}>
       <View style={styles.container}>
@@ -25,7 +19,7 @@ export default function LoginScreen({navigation}: PhoneComponentProps) {
         <LoginButtons navigation={navigation} />
       </View>
     </ImageBackground>
-  );
+  )
 }
 const styles = StyleSheet.create({
   container: {
@@ -43,4 +37,4 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginRight: RW(60),
   },
-});
+})

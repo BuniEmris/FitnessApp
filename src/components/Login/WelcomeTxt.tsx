@@ -1,21 +1,19 @@
-import {View, Text, StyleSheet} from 'react-native';
-import React, {useState} from 'react';
-import {RH, RW} from '../../helpers/Responsive';
+import { View, Text, StyleSheet } from 'react-native'
+import React, { useState } from 'react'
+import { RH, RW } from '../../helpers/Responsive'
 
-export default function WelcomeTxt() {
-  const [phone, setPhone] = useState(true);
+export default function WelcomeTxt({ LoginviaEmail }: any) {
+  const [phone, setPhone] = useState(true)
   return (
     <View>
       <Text style={styles.welcomeTxt}>
-        {phone ? 'Добро пожаловать' : 'Немного о себе '}
+        {!LoginviaEmail ? 'Добро пожаловать' : 'Немного о себе '}
       </Text>
       <Text style={styles.enterPhoneTxt}>
-        {phone
-          ? 'Введите Ваш номер телефона'
-          : 'Введите адрес электронной почты'}
+        {!LoginviaEmail ? 'Введите Ваш номер телефона' : 'Введите адрес электронной почты'}
       </Text>
     </View>
-  );
+  )
 }
 const styles = StyleSheet.create({
   welcomeTxt: {
@@ -35,4 +33,4 @@ const styles = StyleSheet.create({
     lineHeight: RH(35),
     color: '#333333',
   },
-});
+})

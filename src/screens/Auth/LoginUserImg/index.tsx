@@ -10,7 +10,7 @@ import { SCREENS } from '@routes/navigations.types'
 import ImagePicker from 'react-native-image-crop-picker'
 export default function LoginUserImg({ navigation }: PhoneComponentProps) {
   const [localFileImg, setlocalFileImg] = useState()
-  const navAddress = SCREENS.USER_IMG
+  const navAddress = SCREENS.PROGRESS_USERDATA
   const onFileSelected = (image: any) => {
     console.log(image, 'images')
     setlocalFileImg(image)
@@ -55,7 +55,7 @@ export default function LoginUserImg({ navigation }: PhoneComponentProps) {
             </TouchableOpacity>
           </View>
         </View>
-        <ContinueBtn navigation={navigation} address={navAddress} />
+        <ContinueBtn userName={localFileImg} navigation={navigation} address={navAddress} />
       </View>
     </View>
   )

@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { RH, RW } from '../../helpers/Responsive'
 import SwitchSelector from 'react-native-switch-selector'
 import Introduction from '@helpers/Icons/Introduction'
@@ -12,6 +12,18 @@ import NameInput from '../../components/Login/NameInput'
 import ContinueBtn from '@ui/Buttons/ContinueBtn'
 import { SCREENS } from '@routes/navigations.types'
 export default function LoginName({ navigation }: PhoneComponentProps) {
+  const [userName, setUserName] = useState('')
+  const [activeBtn, setActiveBtn] = useState(false)
+  const activeStatus = () => {
+    console.log(userName, 'name of USer')
+
+    if (userName) {
+      return setActiveBtn(true)
+    } else {
+      return setActiveBtn(false)
+    }
+  }
+
   const ToUserScreen = SCREENS.USER_INFO
   return (
     <View style={styles.container}>
@@ -20,13 +32,18 @@ export default function LoginName({ navigation }: PhoneComponentProps) {
         <Introduction />
       </View>
       <MySwitchSelector />
-      <NameInput />
+      <NameInput
+        mailInput={false}
+        setActiveBtn={setActiveBtn}
+        userName={userName}
+        setUserName={setUserName}
+      />
       <TouchableOpacity
-        // onPress={() => navigation.navigate(SCREENS.ALLERGIC_PRODUCTS)}
+        onPress={() => navigation.navigate(SCREENS.ALLERGIC_PRODUCTS)}
         style={styles.products}>
         <Products />
       </TouchableOpacity>
-      <ContinueBtn navigation={navigation} address={ToUserScreen} />
+      <ContinueBtn userName={userName} navigation={navigation} address={ToUserScreen} />
     </View>
   )
 }

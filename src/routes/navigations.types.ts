@@ -11,4 +11,6 @@ export enum SCREENS {
   USER_INFO = 'user-info',
   USER_IMG = 'user-image',
   ALLERGIC_PRODUCTS = 'user-alergic-list',
+  PROGRESS_USERDATA = 'collect-progress',
+  MAIN = 'main',
 }

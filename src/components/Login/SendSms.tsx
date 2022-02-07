@@ -1,46 +1,50 @@
-import {View, Text, StyleSheet} from 'react-native';
-import React, {useEffect, useState} from 'react';
-import {RH} from '../../helpers/Responsive';
-import BackgroundTimer from 'react-native-background-timer';
-export default function SendSms() {
-  const [countdown, setCountdown] = useState(120);
-  const [showCountdown, setShowCountdown] = useState(true);
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { RH } from '../../helpers/Responsive'
+import BackgroundTimer from 'react-native-background-timer'
+type Iprop = {
+  showErrorPin: boolean
+  setShowErrorPin: Function
+}
+export default function SendSms({ showErrorPin, setShowErrorPin }: Iprop) {
+  const [countdown, setCountdown] = useState(120)
+  const [showCountdown, setShowCountdown] = useState(true)
 
   const startTimer = () => {
     BackgroundTimer.runBackgroundTimer(() => {
       setCountdown(secs => {
-        if (secs > 0) return secs - 1;
-        else return 0;
-      });
-    }, 1000);
-  };
+        if (secs > 0) return secs - 1
+        else return 0
+      })
+    }, 1000)
+  }
 
   useEffect(() => {
-    if (showCountdown) startTimer();
-    else BackgroundTimer.stopBackgroundTimer();
+    if (showCountdown) startTimer()
+    else BackgroundTimer.stopBackgroundTimer()
 
     return () => {
-      BackgroundTimer.stopBackgroundTimer();
-    };
-  }, [showCountdown]);
+      BackgroundTimer.stopBackgroundTimer()
+    }
+  }, [showCountdown])
   useEffect(() => {
-    if (countdown === 0) BackgroundTimer.stopBackgroundTimer();
-  }, [countdown]);
+    if (countdown === 0) BackgroundTimer.stopBackgroundTimer()
+  }, [countdown])
 
   const showTimer = () => {
-    let mins = Math.floor((countdown / 60) % 60);
-    let secs = Math.floor(countdown % 60);
-    let showMins = mins < 10 ? `0${mins}` : mins;
-    let showSecs = secs < 10 ? `0${secs}` : secs;
+    let mins = Math.floor((countdown / 60) % 60)
+    let secs = Math.floor(countdown % 60)
+    let showMins = mins < 10 ? `0${mins}` : mins
+    let showSecs = secs < 10 ? `0${secs}` : secs
     return {
       showMins,
       showSecs,
-    };
-  };
+    }
+  }
 
   return (
     <View style={styles.SmsContainer}>
-      {countdown !== 0 && (
+      {countdown !== 0 && !showErrorPin && (
         <Text style={styles.smsText}>
           Отпарвить код снова{' '}
           <Text style={styles.timer}>
@@ -48,11 +52,18 @@ export default function SendSms() {
           </Text>
         </Text>
       )}
-      {countdown === 0 && (
-        <Text style={styles.timer}> Отпарвить код снова</Text>
-      )}
+      {countdown === 0 ||
+        (showErrorPin && (
+          <TouchableOpacity
+            onPress={() => {
+              setShowErrorPin(false)
+              countdown === 0
+            }}>
+            <Text style={styles.timer}> Отпарвить код снова</Text>
+          </TouchableOpacity>
+        ))}
     </View>
-  );
+  )
 }
 const styles = StyleSheet.create({
   SmsContainer: {
@@ -68,4 +79,4 @@ const styles = StyleSheet.create({
     color: '#565FFF',
     fontSize: 16,
   },
-});
+})

@@ -1,20 +1,40 @@
-import {View, Text, StyleSheet, TextInput} from 'react-native';
-import React, {useState} from 'react';
-import {RH, RW} from '../../helpers/Responsive';
+import { View, Text, StyleSheet, TextInput } from 'react-native'
+import React, { useState } from 'react'
+import { RH, RW } from '../../helpers/Responsive'
 
-export default function NameInput() {
-  const [userName, setUserName] = useState('');
-
+export default function NameInput({
+  userName,
+  setUserName,
+  setActiveBtn,
+  userMail,
+  setUserMail,
+  mailInput,
+}: any) {
   return (
     <View style={styles.inputContainer}>
-      <TextInput
-        value={userName}
-        onChangeText={val => setUserName(val)}
-        style={styles.input}
-        placeholder="Имя"
-      />
+      {!mailInput ? (
+        <TextInput
+          value={userName}
+          onChangeText={val => {
+            setUserName(val)
+            setActiveBtn(true)
+          }}
+          style={styles.input}
+          placeholder="Имя"
+        />
+      ) : (
+        <TextInput
+          value={userMail}
+          onChangeText={val => {
+            setUserMail(val)
+            setActiveBtn(true)
+          }}
+          style={styles.input}
+          placeholder="buni@gmail.com"
+        />
+      )}
     </View>
-  );
+  )
 }
 const styles = StyleSheet.create({
   inputContainer: {
@@ -32,4 +52,4 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     lineHeight: RH(30),
   },
-});
+})

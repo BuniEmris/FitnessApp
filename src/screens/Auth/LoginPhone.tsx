@@ -1,26 +1,45 @@
-import React, {useState} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import GoBackBtn from '@ui/Buttons/GoBackBtn';
-import {RH, RW} from '../../helpers/Responsive';
-import Docs from '@helpers/Icons/TextTemporary';
+import React, { useState } from 'react'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import GoBackBtn from '@ui/Buttons/GoBackBtn'
+import { RH, RW } from '../../helpers/Responsive'
+import Docs from '@helpers/Icons/TextTemporary'
+import PhoneInput from '../../components/Login/PhoneInput'
+import WelcomeTxt from '../../components/Login/WelcomeTxt'
+import NameInput from '@components/Login/NameInput'
+import ContinueBtn from '@ui/Buttons/ContinueBtn'
+import { SCREENS } from '@routes/navigations.types'
 
-import {PhoneComponentProps} from './LoginScreen';
-import PhoneInput from '../../components/Login/PhoneInput';
-import WelcomeTxt from '../../components/Login/WelcomeTxt';
-
-export default function LoginPhone({navigation}: PhoneComponentProps) {
+export default function LoginPhone({ route, navigation }: any) {
+  const [userMail, setUserMail] = useState('')
+  const [activeBtn, setActiveBtn] = useState(false)
+  const ToUserScreen = SCREENS.AUTH_CODE
   return (
     <View style={styles.container}>
-      <View style={{marginTop: 20}}>
+      <View style={{ marginTop: 20 }}>
         <GoBackBtn navigation={navigation} infoColor={false} />
       </View>
-      <WelcomeTxt />
-      <PhoneInput navigation={navigation} />
-      <TouchableOpacity style={styles.docsBtn}>
-        <Docs />
-      </TouchableOpacity>
+      <WelcomeTxt LoginviaEmail={route?.params?.LoginviaEmail} />
+      {route?.params?.LoginviaEmail ? (
+        <View>
+          <NameInput
+            mailInput={true}
+            userMail={userMail}
+            setUserMail={setUserMail}
+            setActiveBtn={setActiveBtn}
+          />
+          <View style={styles.devider} />
+          <ContinueBtn userName={userMail} navigation={navigation} address={ToUserScreen} />
+        </View>
+      ) : (
+        <View>
+          <PhoneInput navigation={navigation} />
+          <TouchableOpacity style={styles.docsBtn}>
+            <Docs />
+          </TouchableOpacity>
+        </View>
+      )}
     </View>
-  );
+  )
 }
 const styles = StyleSheet.create({
   container: {
@@ -33,4 +52,7 @@ const styles = StyleSheet.create({
   docsBtn: {
     marginTop: RH(50),
   },
-});
+  devider: {
+    marginTop: RH(200),
+  },
+})

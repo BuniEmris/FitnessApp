@@ -11,6 +11,8 @@ import LoginName from '@screens/Auth/LoginName'
 import LoginUserInfo from '@screens/Auth/LoginUserInfo'
 import LoginUserImg from '@screens/Auth/LoginUserImg'
 import AllergyList from '@screens/Auth/AllergyList'
+import ProgressData from '@screens/Auth/ProgressData'
+import { MainScreen } from '@screens/Main'
 
 export type ScreenProps = Parameters<typeof Stack['Screen']>[number]
 
@@ -60,6 +62,20 @@ export const RoutesScreens: (ScreenProps & { name: string })[] = [
   {
     name: SCREENS.ALLERGIC_PRODUCTS,
     component: AllergyList,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: SCREENS.PROGRESS_USERDATA,
+    component: ProgressData,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: SCREENS.MAIN,
+    component: MainScreen,
     options: {
       headerShown: false,
     },

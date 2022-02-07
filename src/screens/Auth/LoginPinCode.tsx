@@ -3,14 +3,14 @@ import React, { useState, useRef } from 'react'
 import { RH, RW } from '../../helpers/Responsive'
 import GoBackBtn from '@ui/Buttons/GoBackBtn'
 import PhoneNo from '@helpers/Icons/PhoneText'
-import SmsSend from '@helpers/Icons/SmsSend'
+import MailText from '@helpers/Icons/MailText'
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input'
 import { PhoneComponentProps } from './LoginScreen'
 import SendSms from '../../components/Login/SendSms'
 import ValidationText from '../../components/Login/ValidationText'
 import { SCREENS } from '@routes/navigations.types'
 
-export default function LoginPinCode({ navigation }: PhoneComponentProps) {
+export default function LoginPinCode({ route, navigation }: any) {
   const [pincodeValue, setPincodeValue] = useState('')
   const [showErrorPin, setShowErrorPin] = useState(false)
   const pinRef = useRef(null)
@@ -29,20 +29,28 @@ export default function LoginPinCode({ navigation }: PhoneComponentProps) {
         <GoBackBtn navigation={navigation} infoColor={false} />
       </View>
       <Text style={styles.verificationTxt}>Верификация</Text>
-      <Text style={styles.enterPhoneTxt}>Мы отправили вам СМС код</Text>
-      <PhoneNo />
+      {route?.params?.userMailTxt ? (
+        <MailText />
+      ) : (
+        <View>
+          <Text style={styles.enterPhoneTxt}>Мы отправили вам СМС код</Text>
+          <PhoneNo />
+        </View>
+      )}
+
       <View style={styles.pinContainer}>
         <SmoothPinCodeInput
           ref={pinRef}
           value={pincodeValue}
-          onTextChange={handlingCode}
+          onTextChange={(val: any) => setPincodeValue(val)}
           cellStyle={styles.inputContainer}
           textStyle={styles.inputText}
+          onFulfill={handlingCode}
           autoFocus
         />
       </View>
       {showErrorPin && <ValidationText />}
-      <SendSms />
+      <SendSms showErrorPin={showErrorPin} setShowErrorPin={setShowErrorPin} />
     </View>
   )
 }
