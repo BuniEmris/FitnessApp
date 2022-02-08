@@ -17,5 +17,6 @@ export type StackParamList = {
   [SCREENS.OFFER]: undefined
   [SCREENS.MAIN]: undefined
   [SCREENS.RULES]: undefined
+  [SCREENS.RULES_DETAILS]: undefined
   [SCREENS.USER_CALORIES]: undefined
 }

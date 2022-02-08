@@ -11,6 +11,7 @@ export enum SCREENS {
   USER_INFO = 'user-info',
   USER_IMG = 'user-image',
   RULES = 'rules',
+  RULES_DETAILS = 'rules-details',
   ALLERGIC_PRODUCTS = 'user-alergic-list',
   PROGRESS_USERDATA = 'collect-progress',
   USER_CALORIES = 'user-calories',

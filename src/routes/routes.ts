@@ -16,6 +16,7 @@ import { MainScreen } from '@screens/Main'
 import Rules from '@screens/Auth/Rules'
 import Calories from '@screens/Auth/Calories'
 import Offer from '@screens/Auth/Offer'
+import RulesDetails from '@screens/Auth/RulesDetails'
 
 export type ScreenProps = Parameters<typeof Stack['Screen']>[number]
 
@@ -93,6 +94,13 @@ export const RoutesScreens: (ScreenProps & { name: string })[] = [
   {
     name: SCREENS.RULES,
     component: Rules,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: SCREENS.RULES_DETAILS,
+    component: RulesDetails,
     options: {
       headerShown: false,
     },

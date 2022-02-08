@@ -2,12 +2,17 @@ import { View, Text } from 'react-native'
 import React, { useState } from 'react'
 import { styles } from './styles'
 import { Slider } from '@miblanchard/react-native-slider'
-export default function ActivityLevel() {
+type IProps = {
+  calory: boolean
+}
+export default function ActivityLevel({ calory }: IProps) {
   const [level, setLevel] = useState<any>(1)
   const thumbImage = require('../../../../assets/image/levelA.png')
   return (
     <View style={styles.container}>
-      <Text style={styles.headerText}>Увровень физической нагрузки </Text>
+      <Text style={styles.headerText}>
+        {calory ? 'Выбери сам, передвигая ползунок' : 'Увровень физической нагрузки'}
+      </Text>
       <View style={styles.circleMin}>
         <Text style={styles.circleMinTxt}>Min</Text>
       </View>
@@ -38,9 +43,11 @@ export default function ActivityLevel() {
           onValueChange={value => setLevel(value)}
         />
       </View>
-      <Text style={styles.mainText}>
-        Низкий уровень, <Text style={styles.innerText}>подойдет новичкам</Text>
-      </Text>
+      {!calory && (
+        <Text style={styles.mainText}>
+          Низкий уровень, <Text style={styles.innerText}>подойдет новичкам</Text>
+        </Text>
+      )}
     </View>
   )
 }

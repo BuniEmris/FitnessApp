@@ -31,6 +31,14 @@ export const typography = StyleSheet.create({
     lineHeight: 30,
     color: Colors.BLACK,
   },
+  largeBold: {
+    fontFamily: 'Gilroy',
+    fontStyle: 'normal',
+    fontWeight: '800',
+    fontSize: PixelRatio.getFontScale() * 1.07 * 24,
+    lineHeight: 30,
+    color: Colors.BLACK,
+  },
   small: {
     fontFamily: 'Gilroy',
     fontStyle: 'normal',

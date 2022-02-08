@@ -74,7 +74,7 @@ export default function LoginUserInfo({ navigation }: PhoneComponentProps) {
           {step === 4 && <UserGoal />}
         </BottomSheet>
         <View style={{ marginVertical: 32 }}>
-          <ActivityLevel />
+          <ActivityLevel calory={false} />
         </View>
         <TouchableOpacity
           onPress={() => {
