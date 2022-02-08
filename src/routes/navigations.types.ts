@@ -13,6 +13,7 @@ export enum SCREENS {
   RULES = 'rules',
   ALLERGIC_PRODUCTS = 'user-alergic-list',
   PROGRESS_USERDATA = 'collect-progress',
-
+  USER_CALORIES = 'user-calories',
+  OFFER = 'offer',
   MAIN = 'main',
 }

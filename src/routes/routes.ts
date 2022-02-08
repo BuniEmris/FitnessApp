@@ -14,6 +14,8 @@ import AllergyList from '@screens/Auth/AllergyList'
 import ProgressData from '@screens/Auth/ProgressData'
 import { MainScreen } from '@screens/Main'
 import Rules from '@screens/Auth/Rules'
+import Calories from '@screens/Auth/Calories'
+import Offer from '@screens/Auth/Offer'
 
 export type ScreenProps = Parameters<typeof Stack['Screen']>[number]
 
@@ -68,6 +70,13 @@ export const RoutesScreens: (ScreenProps & { name: string })[] = [
     },
   },
   {
+    name: SCREENS.USER_CALORIES,
+    component: Calories,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
     name: SCREENS.PROGRESS_USERDATA,
     component: ProgressData,
     options: {
@@ -75,8 +84,8 @@ export const RoutesScreens: (ScreenProps & { name: string })[] = [
     },
   },
   {
-    name: SCREENS.MAIN,
-    component: MainScreen,
+    name: SCREENS.OFFER,
+    component: Offer,
     options: {
       headerShown: false,
     },
@@ -84,6 +93,13 @@ export const RoutesScreens: (ScreenProps & { name: string })[] = [
   {
     name: SCREENS.RULES,
     component: Rules,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: SCREENS.MAIN,
+    component: MainScreen,
     options: {
       headerShown: false,
     },

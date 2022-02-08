@@ -16,7 +16,7 @@ export default function LoginScreen({ navigation }: PhoneComponentProps) {
         <View style={styles.mainText}>
           <MainText />
         </View>
-        <LoginButtons navigation={navigation} />
+        <LoginButtons offer={false} navigation={navigation} />
       </View>
     </ImageBackground>
   )

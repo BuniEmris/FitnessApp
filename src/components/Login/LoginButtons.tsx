@@ -18,6 +18,8 @@ const LoginBtns = ({ btnText, navigation, mailDesign, icon }: IButtonProps) => {
       onPress={() => {
         if (btnText === 'Войти по E-mail') {
           return navigation.navigate('auth-phone', { LoginviaEmail: true })
+        } else if (btnText === 'БЕСПЛАТНАЯ ПРОБНАЯ ВЕРСИЯ НА 7 ДНЕЙ') {
+          return navigation.navigate('main')
         } else {
           return navigation.navigate('auth-phone')
         }
@@ -37,12 +39,37 @@ const LoginBtns = ({ btnText, navigation, mailDesign, icon }: IButtonProps) => {
     </TouchableOpacity>
   )
 }
-export default function LoginButtons({ navigation }: PhoneComponentProps) {
+type IProps = {
+  navigation: any
+  offer: boolean
+}
+export default function LoginButtons({ navigation, offer }: IProps) {
   return (
     <View>
-      <LoginBtns btnText="Войти по SMS" navigation={navigation} mailDesign={false} icon={false} />
-      <LoginBtns btnText="Войти с помощью Apple" navigation={navigation} mailDesign={false} icon />
-      <LoginBtns btnText="Войти по E-mail" navigation={navigation} mailDesign={true} icon />
+      {offer ? (
+        <LoginBtns
+          btnText="БЕСПЛАТНАЯ ПРОБНАЯ ВЕРСИЯ НА 7 ДНЕЙ"
+          navigation={navigation}
+          mailDesign={false}
+          icon={false}
+        />
+      ) : (
+        <View>
+          <LoginBtns
+            btnText="Войти по SMS"
+            navigation={navigation}
+            mailDesign={false}
+            icon={false}
+          />
+          <LoginBtns
+            btnText="Войти с помощью Apple"
+            navigation={navigation}
+            mailDesign={false}
+            icon
+          />
+          <LoginBtns btnText="Войти по E-mail" navigation={navigation} mailDesign={true} icon />
+        </View>
+      )}
     </View>
   )
 }
@@ -57,7 +84,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   smsBtnText: {
-    fontSize: RW(18),
+    fontSize: RW(15),
     fontWeight: '600',
     color: 'black',
     lineHeight: RH(21),

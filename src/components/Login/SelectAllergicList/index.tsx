@@ -28,7 +28,7 @@ export default function SelectAllergicList({ navigation }: PhoneComponentProps) 
         style={styles.container}
         rowStyle={styles.row}
         selectedCheckboxStyle={styles.selectedCheckboxStyle}
-        checkboxStyle={styles.checkboxStyle}
+        // checkboxStyle={styles.checkboxStyle}
         items={products}
         checkboxSource={unselected}
         selectedCheckboxSource={selected}

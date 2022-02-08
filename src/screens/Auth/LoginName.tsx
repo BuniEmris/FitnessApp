@@ -31,7 +31,7 @@ export default function LoginName({ navigation }: PhoneComponentProps) {
       <View style={styles.intro}>
         <Introduction />
       </View>
-      <MySwitchSelector />
+      <MySwitchSelector calory={false} />
       <NameInput
         mailInput={false}
         setActiveBtn={setActiveBtn}

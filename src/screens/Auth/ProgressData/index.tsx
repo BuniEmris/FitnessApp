@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { styles } from './styles'
 import ProgressTx from '@helpers/Icons/ProgressTx'
@@ -8,7 +8,7 @@ import ArcSlider from 'rn-arc-slider'
 import { PhoneComponentProps } from '../LoginScreen'
 import { SCREENS } from '@routes/navigations.types'
 export default function ProgressData({ navigation }: PhoneComponentProps) {
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(67)
   useEffect(() => {
     if (value === 100) {
       navigation.navigate(SCREENS.MAIN)
@@ -34,6 +34,13 @@ export default function ProgressData({ navigation }: PhoneComponentProps) {
       </View>
       <View style={styles.devider} />
       <ProgressBtm />
+      <TouchableOpacity
+        style={{ marginTop: 20 }}
+        onPress={() => {
+          navigation.navigate(SCREENS.OFFER)
+        }}>
+        <Text style={{ fontWeight: '600' }}>далее</Text>
+      </TouchableOpacity>
     </View>
   )
 }

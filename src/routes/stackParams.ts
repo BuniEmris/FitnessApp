@@ -14,6 +14,8 @@ export type StackParamList = {
   [SCREENS.USER_IMG]: undefined
   [SCREENS.ALLERGIC_PRODUCTS]: undefined
   [SCREENS.PROGRESS_USERDATA]: undefined
+  [SCREENS.OFFER]: undefined
   [SCREENS.MAIN]: undefined
   [SCREENS.RULES]: undefined
+  [SCREENS.USER_CALORIES]: undefined
 }
