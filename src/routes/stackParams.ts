@@ -15,4 +15,5 @@ export type StackParamList = {
   [SCREENS.ALLERGIC_PRODUCTS]: undefined
   [SCREENS.PROGRESS_USERDATA]: undefined
   [SCREENS.MAIN]: undefined
+  [SCREENS.RULES]: undefined
 }

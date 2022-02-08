@@ -13,6 +13,7 @@ import UserHeight from '../../components/Login/UserInfo/UserHeight'
 import UserWeight from '@components/Login/UserInfo/UserWeight'
 import { SCREENS } from '@routes/navigations.types'
 import ActivityLevel from '@components/Login/UserInfo/ActivityLevel'
+import UserGoal from '@components/Login/UserInfo/UserGoal'
 
 export default function LoginUserInfo({ navigation }: PhoneComponentProps) {
   const bottomSheet = useRef()
@@ -70,6 +71,7 @@ export default function LoginUserInfo({ navigation }: PhoneComponentProps) {
           {step === 1 && <UserDoB date={date} setDate={setDate} />}
           {step === 2 && <UserHeight userHeight={userHeight} setUserHeight={setUserHeight} />}
           {step === 3 && <UserWeight />}
+          {step === 4 && <UserGoal />}
         </BottomSheet>
         <View style={{ marginVertical: 32 }}>
           <ActivityLevel />

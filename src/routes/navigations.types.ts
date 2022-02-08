@@ -10,7 +10,9 @@ export enum SCREENS {
   AUTH_NAME = 'auth-name',
   USER_INFO = 'user-info',
   USER_IMG = 'user-image',
+  RULES = 'rules',
   ALLERGIC_PRODUCTS = 'user-alergic-list',
   PROGRESS_USERDATA = 'collect-progress',
+
   MAIN = 'main',
 }

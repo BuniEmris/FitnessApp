@@ -2,8 +2,8 @@ import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import SelectMultiple from 'react-native-select-multiple'
 import { styles } from './styles'
-// import unselected from '../../../assets/image/unselected.png'
-// import selected from '../../../assets/image/selected.png'
+import unselected from '../../../assets/image/unselected.png'
+import selected from '../../../assets/image/selected.png'
 import Done from '@helpers/Icons/Done'
 import { PhoneComponentProps } from '@screens/Auth/LoginScreen'
 const products = [
@@ -30,8 +30,8 @@ export default function SelectAllergicList({ navigation }: PhoneComponentProps) 
         selectedCheckboxStyle={styles.selectedCheckboxStyle}
         checkboxStyle={styles.checkboxStyle}
         items={products}
-        // checkboxSource={unselected}
-        // selectedCheckboxSource={selected}
+        checkboxSource={unselected}
+        selectedCheckboxSource={selected}
         selectedItems={selectedProducts}
         onSelectionsChange={onSelectionsChange}
         labelStyle={styles.labelStyle}

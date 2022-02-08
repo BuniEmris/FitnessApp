@@ -33,7 +33,11 @@ export default function LoginPhone({ route, navigation }: any) {
       ) : (
         <View>
           <PhoneInput navigation={navigation} />
-          <TouchableOpacity style={styles.docsBtn}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate(SCREENS.RULES)
+            }}
+            style={styles.docsBtn}>
             <Docs />
           </TouchableOpacity>
         </View>

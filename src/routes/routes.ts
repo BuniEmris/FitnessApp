@@ -13,6 +13,7 @@ import LoginUserImg from '@screens/Auth/LoginUserImg'
 import AllergyList from '@screens/Auth/AllergyList'
 import ProgressData from '@screens/Auth/ProgressData'
 import { MainScreen } from '@screens/Main'
+import Rules from '@screens/Auth/Rules'
 
 export type ScreenProps = Parameters<typeof Stack['Screen']>[number]
 
@@ -76,6 +77,13 @@ export const RoutesScreens: (ScreenProps & { name: string })[] = [
   {
     name: SCREENS.MAIN,
     component: MainScreen,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: SCREENS.RULES,
+    component: Rules,
     options: {
       headerShown: false,
     },
