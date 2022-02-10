@@ -3,15 +3,18 @@ import React from 'react'
 import { PhoneComponentProps } from '@screens/Auth/LoginScreen'
 import { RH, RW } from '@helpers/Responsive'
 import { NavigationContainer } from '@react-navigation/native'
-
+import LinearGradient from 'react-native-linear-gradient'
 export default function ContinueBtn({ navigation, address, userName }: any) {
   return (
-    <TouchableOpacity
-      onPress={address}
-      disabled={userName ? false : true}
-      style={userName ? styles.nextActive : styles.nextInActive}>
-      <Text style={styles.nextText}>Продолжить</Text>
-    </TouchableOpacity>
+    <LinearGradient
+      style={userName ? styles.nextActive : styles.nextInActive}
+      start={{ x: 0, y: 0.5 }}
+      end={{ x: 1, y: 0.5 }}
+      colors={['#F2521F', '#FF8D4E']}>
+      <TouchableOpacity onPress={address} disabled={userName ? false : true}>
+        <Text style={styles.nextText}>Продолжить</Text>
+      </TouchableOpacity>
+    </LinearGradient>
   )
 }
 const styles = StyleSheet.create({
@@ -21,7 +24,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignSelf: 'center',
     justifyContent: 'center',
-    backgroundColor: '#FA5C01',
+    // backgroundColor: '#FA5C01',
     marginTop: RH(152),
   },
   nextInActive: {
@@ -30,7 +33,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignSelf: 'center',
     justifyContent: 'center',
-    backgroundColor: '#FA5C01',
+    // backgroundColor: '#FA5C01',
     marginTop: RH(152),
     opacity: 0.2,
   },

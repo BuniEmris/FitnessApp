@@ -3,6 +3,7 @@ import React from 'react'
 import { RH, RW } from '../../helpers/Responsive'
 import AppleIcon from '../../assets/Icons/AppleIcon'
 import { PhoneComponentProps } from '../../screens/Auth/LoginScreen'
+import { typography } from '@styles/typography'
 
 type IButtonProps = {
   btnText: string
@@ -84,6 +85,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   smsBtnText: {
+    // fontFamily: typography.medium,
     fontSize: RW(15),
     fontWeight: '600',
     color: 'black',
