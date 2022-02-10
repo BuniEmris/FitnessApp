@@ -30,7 +30,7 @@ export default function NameInput({
             setActiveBtn(true)
           }}
           style={styles.input}
-          placeholder="buni@gmail.com"
+          placeholder="fitness@gmail.com"
         />
       )}
     </View>
