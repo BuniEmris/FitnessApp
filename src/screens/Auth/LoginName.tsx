@@ -24,7 +24,9 @@ export default function LoginName({ navigation }: PhoneComponentProps) {
     }
   }
 
-  const ToUserScreen = SCREENS.USER_INFO
+  const ToUserScreen = () => {
+    navigation.navigate('user-info')
+  }
   return (
     <View style={styles.container}>
       <HeaderName navigation={navigation} color={false} />

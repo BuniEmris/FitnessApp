@@ -12,7 +12,12 @@ import { SCREENS } from '@routes/navigations.types'
 export default function LoginPhone({ route, navigation }: any) {
   const [userMail, setUserMail] = useState('')
   const [activeBtn, setActiveBtn] = useState(false)
-  const ToUserScreen = SCREENS.AUTH_CODE
+  const ToUserScreen = () => {
+    navigation.navigate('auth-pincode', { userMailTxt: true })
+  }
+
+  // ('auth-pincode', { userMailTxt: true })
+
   return (
     <View style={styles.container}>
       <View style={{ marginTop: 20 }}>

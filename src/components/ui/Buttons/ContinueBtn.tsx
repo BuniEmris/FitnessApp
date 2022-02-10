@@ -7,9 +7,7 @@ import { NavigationContainer } from '@react-navigation/native'
 export default function ContinueBtn({ navigation, address, userName }: any) {
   return (
     <TouchableOpacity
-      onPress={() => {
-        navigation.navigate(address)
-      }}
+      onPress={address}
       disabled={userName ? false : true}
       style={userName ? styles.nextActive : styles.nextInActive}>
       <Text style={styles.nextText}>Продолжить</Text>

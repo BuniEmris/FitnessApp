@@ -10,7 +10,11 @@ import { SCREENS } from '@routes/navigations.types'
 import ImagePicker from 'react-native-image-crop-picker'
 export default function LoginUserImg({ navigation }: PhoneComponentProps) {
   const [localFileImg, setlocalFileImg] = useState()
-  const navAddress = SCREENS.PROGRESS_USERDATA
+
+  const navAddress = () => {
+    navigation.navigate('collect-progress')
+  }
+  // SCREENS.PROGRESS_USERDATA
   const onFileSelected = (image: any) => {
     console.log(image, 'images')
     setlocalFileImg(image)

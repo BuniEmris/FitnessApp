@@ -20,10 +20,11 @@ export const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#333333',
   },
-  circleMin: {
+  circleMinActive: {
     width: RW(30),
     height: RH(30),
     borderRadius: 50,
+
     backgroundColor: '#FA5C01',
     alignSelf: 'flex-start',
     left: RW(30),
@@ -31,11 +32,33 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  circleMax: {
+  circleMinInactive: {
     width: RW(30),
     height: RH(30),
     borderRadius: 50,
     backgroundColor: '#C4C4C4',
+    alignSelf: 'flex-start',
+    left: RW(30),
+    top: RW(70),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  circleMaxInActive: {
+    width: RW(30),
+    height: RH(30),
+    borderRadius: 50,
+    backgroundColor: '#C4C4C4',
+    alignSelf: 'flex-end',
+    right: RW(30),
+    top: RW(40),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  circleMaxActive: {
+    width: RW(30),
+    height: RH(30),
+    borderRadius: 50,
+    backgroundColor: '#FA5C01',
     alignSelf: 'flex-end',
     right: RW(30),
     top: RW(40),
