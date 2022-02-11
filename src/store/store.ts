@@ -4,7 +4,7 @@
  **/
 
 import { RootReducer } from './reducer'
-import { createStore, applyMiddleware, Dispatch } from 'redux'
+import { createStore, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 
 const middlewares = [thunk]

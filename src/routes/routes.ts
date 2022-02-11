@@ -8,15 +8,18 @@ import LoginScreen from '@screens/Auth/LoginScreen'
 import LoginPhone from '@screens/Auth/LoginPhone'
 import LoginPinCode from '@screens/Auth/LoginPinCode'
 import LoginName from '@screens/Auth/LoginName'
-import LoginUserInfo from '@screens/Auth/LoginUserInfo'
+import { MainScreen } from '@screens/Main'
+import HomeTabs from '@layouts/HomeTabs'
+import { VideoScreen } from '@screens/Video'
+
 import LoginUserImg from '@screens/Auth/LoginUserImg'
 import AllergyList from '@screens/Auth/AllergyList'
 import ProgressData from '@screens/Auth/ProgressData'
-import { MainScreen } from '@screens/Main'
 import Rules from '@screens/Auth/Rules'
 import Calories from '@screens/Auth/Calories'
 import Offer from '@screens/Auth/Offer'
 import RulesDetails from '@screens/Auth/RulesDetails'
+import LoginUserInfo from "@screens/Auth/LoginUserInfo";
 
 export type ScreenProps = Parameters<typeof Stack['Screen']>[number]
 
@@ -49,13 +52,7 @@ export const RoutesScreens: (ScreenProps & { name: string })[] = [
       headerShown: false,
     },
   },
-  {
-    name: SCREENS.USER_INFO,
-    component: LoginUserInfo,
-    options: {
-      headerShown: false,
-    },
-  },
+
   {
     name: SCREENS.USER_IMG,
     component: LoginUserImg,
@@ -66,6 +63,13 @@ export const RoutesScreens: (ScreenProps & { name: string })[] = [
   {
     name: SCREENS.ALLERGIC_PRODUCTS,
     component: AllergyList,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: SCREENS.USER_INFO,
+    component: LoginUserInfo,
     options: {
       headerShown: false,
     },
@@ -105,9 +109,24 @@ export const RoutesScreens: (ScreenProps & { name: string })[] = [
       headerShown: false,
     },
   },
+
   {
     name: SCREENS.MAIN,
     component: MainScreen,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: SCREENS.HOME_TABS,
+    component: HomeTabs,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: SCREENS.VIDEO,
+    component: VideoScreen,
     options: {
       headerShown: false,
     },

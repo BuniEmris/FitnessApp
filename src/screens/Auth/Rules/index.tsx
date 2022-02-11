@@ -1,12 +1,12 @@
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import React from 'react'
 import GoBackBtn from '@ui/Buttons/GoBackBtn'
 import { PhoneComponentProps } from '../LoginScreen'
 import { styles } from './styles'
-import RulesText from '@helpers/Icons/Rules'
+import RulesText from '@assets/Icons/Rules'
 import RulesBtn from '@components/Login/RulesBtn'
 
-export default function Rules({ navigation }: PhoneComponentProps) {
+export default function Rules({}: PhoneComponentProps) {
   const rulesData = [
     'Политика конфиденциальности',
     'Пользовательское соглашение',
@@ -16,14 +16,14 @@ export default function Rules({ navigation }: PhoneComponentProps) {
   return (
     <View style={styles.container}>
       <View style={{ marginTop: 20 }}>
-        <GoBackBtn navigation={navigation} infoColor={false} />
+        <GoBackBtn infoColor={false} />
       </View>
       <View style={{ marginTop: 20 }}>
         <RulesText />
       </View>
       <View style={{ marginTop: 30 }}>
         {rulesData.map((item, i) => (
-          <RulesBtn key={i} text={item} navigation={navigation} />
+          <RulesBtn key={i} text={item} />
         ))}
       </View>
     </View>

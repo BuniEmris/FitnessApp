@@ -2,14 +2,15 @@ import { View, Text } from 'react-native'
 import React, { useState } from 'react'
 import { styles } from './styles'
 import { Slider } from '@miblanchard/react-native-slider'
-import CaloryIcon from '@helpers/Icons/CalorySliderTxt'
+import { Assets } from '@constants/Icons/Assets'
+
 type IProps = {
   calory: boolean
 }
 export default function ActivityLevel({ calory }: IProps) {
   const [level, setLevel] = useState<any>(0)
-  const thumbImage = require('../../../../assets/image/levelA.png')
-  const caloryImage = require('../../../../assets/image/calory.png')
+  const thumbImage = Assets.levelA
+  const caloryImage = Assets.calory
   console.log(level, 'sss')
   const trackData = [1, 2, 3]
   return (

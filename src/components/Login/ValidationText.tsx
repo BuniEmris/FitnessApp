@@ -1,15 +1,13 @@
-import {View, Text, StyleSheet} from 'react-native';
-import React from 'react';
-import {RH, RW} from '../../helpers/Responsive';
+import { View, Text, StyleSheet } from 'react-native'
+import React from 'react'
+import { RH, RW } from '@helpers/Responsive'
 
 export default function ValidationText() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>
-        Не верный код подтверждения, попробуйте еще раз
-      </Text>
+      <Text style={styles.text}>Не верный код подтверждения, попробуйте еще раз</Text>
     </View>
-  );
+  )
 }
 const styles = StyleSheet.create({
   container: {
@@ -24,4 +22,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: RH(16),
   },
-});
+})

@@ -3,11 +3,11 @@ apply plugin: "com.android.application"
 import com.android.build.OutputFile
 
 
-def buildCode = 1
-def buildName = '1.0.1'
+def buildCode = 10
+def buildName = '1.0.10'
 def buildByHermes = true
 def isUniversal = false
-
+def applicationName = "FitnessApp"
 
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
@@ -143,7 +143,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode buildCode
         versionName buildName
-         vectorDrawables.useSupportLibrary = true
+        vectorDrawables.useSupportLibrary = true
     }
     splits {
         abi {
@@ -152,6 +152,7 @@ android {
             universalApk isUniversal  // If true, also generate a universal APK
             include "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
         }
+
     }
     signingConfigs {
         debug {
@@ -176,6 +177,7 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+
         }
     }
 
@@ -194,6 +196,15 @@ android {
 
         }
     }
+}
+
+def renameAPK(variant, defaultConfig, buildType) {
+ variant.outputs.each { output ->
+
+     def file = output.packageApplication.outputFile
+     def fileName = applicationName + "_V" + buildName + "_"  + "_b" + buildCode  + ".apk"
+     output.packageApplication.outputFile = new File(file.parent, fileName)
+ }
 }
 
 dependencies {

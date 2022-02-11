@@ -1,16 +1,19 @@
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import React, { useState, useRef } from 'react'
-import { RH, RW } from '../../helpers/Responsive'
+import { RH, RW } from '@helpers/Responsive'
 import GoBackBtn from '@ui/Buttons/GoBackBtn'
-import PhoneNo from '@helpers/Icons/PhoneText'
-import MailText from '@helpers/Icons/MailText'
+import PhoneNo from '@assets/Icons/PhoneText'
+import MailText from '@assets/Icons/MailText'
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input'
-import { PhoneComponentProps } from './LoginScreen'
 import SendSms from '../../components/Login/SendSms'
 import ValidationText from '../../components/Login/ValidationText'
 import { SCREENS } from '@routes/navigations.types'
+import { useNavigation } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
 
-export default function LoginPinCode({ route, navigation }: any) {
+export default function LoginPinCode({ route }: any) {
+  const navigation = useNavigation<StackNavigationProp<any, any>>()
+
   const [pincodeValue, setPincodeValue] = useState('')
   const [showErrorPin, setShowErrorPin] = useState(false)
   const pinRef = useRef(null)
@@ -26,7 +29,7 @@ export default function LoginPinCode({ route, navigation }: any) {
   return (
     <View style={styles.container}>
       <View style={{ marginTop: 20 }}>
-        <GoBackBtn navigation={navigation} infoColor={false} />
+        <GoBackBtn infoColor={false} />
       </View>
       <Text style={styles.verificationTxt}>Верификация</Text>
       {route?.params?.userMailTxt ? (

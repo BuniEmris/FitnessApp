@@ -1,21 +1,26 @@
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
 import { PhoneComponentProps } from '@screens/Auth/LoginScreen'
 import { RH, RW } from '@helpers/Responsive'
-import { NavigationContainer } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
+import { SCREENS } from '@routes/navigations.types'
+import { StackNavigationProp } from '@react-navigation/stack'
 
-export default function ContinueBtn({ navigation, address, userName }: any) {
+export default function ContinueBtn({}: PhoneComponentProps) {
+  const navigation = useNavigation<StackNavigationProp<any, any>>()
+
   return (
     <TouchableOpacity
-      onPress={address}
-      disabled={userName ? false : true}
-      style={userName ? styles.nextActive : styles.nextInActive}>
+      onPress={() => {
+        navigation.navigate(SCREENS.USER_INFO)
+      }}
+      style={styles.next}>
       <Text style={styles.nextText}>Продолжить</Text>
     </TouchableOpacity>
   )
 }
 const styles = StyleSheet.create({
-  nextActive: {
+  next: {
     width: RW(325),
     height: RH(60),
     borderRadius: 15,
@@ -23,16 +28,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#FA5C01',
     marginTop: RH(152),
-  },
-  nextInActive: {
-    width: RW(325),
-    height: RH(60),
-    borderRadius: 15,
-    alignSelf: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#FA5C01',
-    marginTop: RH(152),
-    opacity: 0.2,
   },
   nextText: {
     fontSize: RH(18),

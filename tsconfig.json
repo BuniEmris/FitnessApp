@@ -15,7 +15,7 @@
     "skipLibCheck": true,                    /* Skip type checking of declaration files. */
     "resolveJsonModule": true,               /* Allows importing modules with a ‘.json’ extension, which is a common practice in node projects. */
     "forceConsistentCasingInFileNames": true,
-    "types": ["jest"],
+    "types": ["node"]
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
     "paths": {

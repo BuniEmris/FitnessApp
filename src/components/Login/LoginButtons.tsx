@@ -1,27 +1,30 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { RH, RW } from '../../helpers/Responsive'
-import AppleIcon from '../../assets/Icons/AppleIcon'
-import { PhoneComponentProps } from '../../screens/Auth/LoginScreen'
+import { RH, RW } from '@helpers/Responsive'
+import AppleIcon from '@assets/Icons/AppleIcon'
+import { useNavigation } from '@react-navigation/native'
+import { SCREENS } from '@routes/navigations.types'
+import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 
 type IButtonProps = {
   btnText: string
-  navigation: any
   mailDesign: boolean
   icon: boolean
 }
 
-const LoginBtns = ({ btnText, navigation, mailDesign, icon }: IButtonProps) => {
+const LoginBtns = ({ btnText, mailDesign, icon }: IButtonProps) => {
+  const navigation = useNavigation<NativeStackNavigationProp<any>>()
+
   return (
     <TouchableOpacity
       style={mailDesign ? styles.mailBtn : styles.smsBtn}
       onPress={() => {
         if (btnText === 'Войти по E-mail') {
-          return navigation.navigate('auth-phone', { LoginviaEmail: true })
+          return navigation.navigate(SCREENS.AUTH_PHONE, { LoginviaEmail: true })
         } else if (btnText === 'БЕСПЛАТНАЯ ПРОБНАЯ ВЕРСИЯ НА 7 ДНЕЙ') {
-          return navigation.navigate('main')
+          return navigation.navigate(SCREENS.MAIN)
         } else {
-          return navigation.navigate('auth-phone')
+          return navigation.navigate(SCREENS.AUTH_PHONE)
         }
       }}>
       {icon ? (
@@ -40,34 +43,18 @@ const LoginBtns = ({ btnText, navigation, mailDesign, icon }: IButtonProps) => {
   )
 }
 type IProps = {
-  navigation: any
   offer: boolean
 }
-export default function LoginButtons({ navigation, offer }: IProps) {
+export default function LoginButtons({ offer }: IProps) {
   return (
     <View>
       {offer ? (
-        <LoginBtns
-          btnText="БЕСПЛАТНАЯ ПРОБНАЯ ВЕРСИЯ НА 7 ДНЕЙ"
-          navigation={navigation}
-          mailDesign={false}
-          icon={false}
-        />
+        <LoginBtns btnText="БЕСПЛАТНАЯ ПРОБНАЯ ВЕРСИЯ НА 7 ДНЕЙ" mailDesign={false} icon={false} />
       ) : (
         <View>
-          <LoginBtns
-            btnText="Войти по SMS"
-            navigation={navigation}
-            mailDesign={false}
-            icon={false}
-          />
-          <LoginBtns
-            btnText="Войти с помощью Apple"
-            navigation={navigation}
-            mailDesign={false}
-            icon
-          />
-          <LoginBtns btnText="Войти по E-mail" navigation={navigation} mailDesign={true} icon />
+          <LoginBtns btnText="Войти по SMS" mailDesign={false} icon={false} />
+          <LoginBtns btnText="Войти с помощью Apple" mailDesign={false} icon />
+          <LoginBtns btnText="Войти по E-mail" mailDesign={true} icon />
         </View>
       )}
     </View>

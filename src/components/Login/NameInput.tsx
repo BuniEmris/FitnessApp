@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet, TextInput } from 'react-native'
-import React, { useState } from 'react'
-import { RH, RW } from '../../helpers/Responsive'
+import { View, StyleSheet, TextInput } from 'react-native'
+import React from 'react'
+import { RH, RW } from '@helpers/Responsive'
 
 export default function NameInput({
   userName,

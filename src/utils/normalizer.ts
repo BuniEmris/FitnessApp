@@ -12,5 +12,5 @@ const WIDTH = Window.width
 const HEIGHT = Window.height
 const SCREEN_WIDTH = Screen.width
 const SCREEN_HEIGHT = Screen.height
-const hasNotch =  hasNotchDevice()
+const hasNotch = hasNotchDevice()
 export { Window, WIDTH, HEIGHT, hasNotch, SCREEN_WIDTH, SCREEN_HEIGHT }

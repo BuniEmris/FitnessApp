@@ -1,18 +1,23 @@
-import { View, Text, TouchableOpacity, Alert, Image } from 'react-native'
+import { View, TouchableOpacity, Image } from 'react-native'
 import React, { useState } from 'react'
 import HeaderName from '@components/Login/HeaderName'
 import { PhoneComponentProps } from '../LoginScreen'
 import { styles } from './styles'
-import UserImgTxt from '@helpers/Icons/UserImgTxt'
-import AddImg from '@helpers/Icons/AddImg'
+import UserImgTxt from '@assets/Icons/UserImgTxt'
+import AddImg from '@assets/Icons/AddImg'
 import ContinueBtn from '@ui/Buttons/ContinueBtn'
-import { SCREENS } from '@routes/navigations.types'
 import ImagePicker from 'react-native-image-crop-picker'
-export default function LoginUserImg({ navigation }: PhoneComponentProps) {
+import { useNavigation } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
+import { SCREENS } from '@routes/navigations.types'
+
+export default function LoginUserImg({}: PhoneComponentProps) {
+  const navigation = useNavigation<StackNavigationProp<any, any>>()
+
   const [localFileImg, setlocalFileImg] = useState()
 
   const navAddress = () => {
-    navigation.navigate('collect-progress')
+    navigation.navigate(SCREENS.PROGRESS_USERDATA)
   }
   // SCREENS.PROGRESS_USERDATA
   const onFileSelected = (image: any) => {
@@ -22,7 +27,7 @@ export default function LoginUserImg({ navigation }: PhoneComponentProps) {
   }
   return (
     <View style={styles.container}>
-      <HeaderName navigation={navigation} color={false} />
+      <HeaderName color={false} />
       <View style={styles.divider}>
         <UserImgTxt />
       </View>
@@ -59,7 +64,7 @@ export default function LoginUserImg({ navigation }: PhoneComponentProps) {
             </TouchableOpacity>
           </View>
         </View>
-        <ContinueBtn userName={localFileImg} navigation={navigation} address={navAddress} />
+        <ContinueBtn userName={localFileImg} address={navAddress} />
       </View>
     </View>
   )

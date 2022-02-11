@@ -1,9 +1,9 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { RH, RW } from '@helpers/Responsive'
-import GoalText from '@helpers/Icons/GoalText'
-import GoalBtn from '@helpers/Icons/GoalBtn'
-import Done from '@helpers/Icons/Done'
+import GoalText from '@assets/Icons/GoalText'
+import GoalBtn from '@assets/Icons/GoalBtn'
+import Done from '@assets/Icons/Done'
 
 export default function UserGoal() {
   return (

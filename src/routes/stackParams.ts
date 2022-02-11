@@ -10,8 +10,8 @@ export type StackParamList = {
   [SCREENS.AUTH_CODE]: undefined
   [SCREENS.AUTH_LOGIN]: undefined
   [SCREENS.AUTH_PHONE]: undefined
-  [SCREENS.USER_INFO]: undefined
   [SCREENS.USER_IMG]: undefined
+  [SCREENS.USER_INFO]: undefined
   [SCREENS.ALLERGIC_PRODUCTS]: undefined
   [SCREENS.PROGRESS_USERDATA]: undefined
   [SCREENS.OFFER]: undefined
@@ -19,4 +19,11 @@ export type StackParamList = {
   [SCREENS.RULES]: undefined
   [SCREENS.RULES_DETAILS]: undefined
   [SCREENS.USER_CALORIES]: undefined
+  //
+
+  [SCREENS.HOME_TABS]: undefined
+  [SCREENS.MAIN]: undefined
+  [SCREENS.VIDEO]: {
+    uri: string
+  }
 }

@@ -1,10 +1,9 @@
-import { View, StyleSheet, ScrollView, TouchableOpacity, Alert } from 'react-native'
+import { View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native'
 import React, { useRef, useState } from 'react'
-import { RH, RW } from '../../helpers/Responsive'
-import UserIntro from '@helpers/Icons/UserIntro'
-import UserInfoBtn from '../../components/Login/UserInfoBtn'
-import LevelSelect from '@helpers/Icons/LevelSelect'
-import Continue from '@helpers/Icons/Continue'
+import { RH, RW } from '@helpers/Responsive'
+import UserIntro from '@assets/Icons/UserIntro'
+import UserInfoBtn from '@components/Login/UserInfoBtn'
+import Continue from '@assets/Icons/Continue'
 import BottomSheet from 'react-native-gesture-bottom-sheet'
 import { PhoneComponentProps } from './LoginScreen'
 import HeaderName from '../../components/Login/HeaderName'
@@ -14,8 +13,12 @@ import UserWeight from '@components/Login/UserInfo/UserWeight'
 import { SCREENS } from '@routes/navigations.types'
 import ActivityLevel from '@components/Login/UserInfo/ActivityLevel'
 import UserGoal from '@components/Login/UserInfo/UserGoal'
+import { useNavigation } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
 
-export default function LoginUserInfo({ navigation }: PhoneComponentProps) {
+export default function LoginUserInfo({}: PhoneComponentProps) {
+  const navigation = useNavigation<StackNavigationProp<any, any>>()
+
   const bottomSheet = useRef()
   // const refRBSheet = useRef()
   const [date, setDate] = useState(new Date())
@@ -24,7 +27,7 @@ export default function LoginUserInfo({ navigation }: PhoneComponentProps) {
 
   return (
     <View style={styles.container}>
-      <HeaderName navigation={navigation} color={true} />
+      <HeaderName color={true} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.intro}>
           <UserIntro />

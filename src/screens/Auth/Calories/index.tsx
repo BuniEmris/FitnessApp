@@ -1,15 +1,20 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, TouchableOpacity } from 'react-native'
 import React from 'react'
-import CaloryHeader from '@helpers/Icons/CaloryHeader'
-import CaloryMain from '@helpers/Icons/CaloryMainText'
-import BottomText from '@helpers/Icons/CaloryBtm'
-import NextBtn from '@helpers/Icons/CaloryBtn'
+import CaloryHeader from '@assets/Icons/CaloryHeader'
+import CaloryMain from '@assets/Icons/CaloryMainText'
+import BottomText from '@assets/Icons/CaloryBtm'
+import NextBtn from '@assets/Icons/CaloryBtn'
 import { styles } from './styles'
 import MySwitchSelector from '@components/Login/MySwitchSelector'
 import ActivityLevel from '@components/Login/UserInfo/ActivityLevel'
 import { PhoneComponentProps } from '../LoginScreen'
 import { SCREENS } from '@routes/navigations.types'
-export default function Calories({ navigation }: PhoneComponentProps) {
+import { useNavigation } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
+
+export default function Calories({}: PhoneComponentProps) {
+  const navigation = useNavigation<StackNavigationProp<any, any>>()
+
   return (
     <View style={styles.container}>
       <CaloryHeader />

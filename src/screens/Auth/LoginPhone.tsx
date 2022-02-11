@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import GoBackBtn from '@ui/Buttons/GoBackBtn'
-import { RH, RW } from '../../helpers/Responsive'
-import Docs from '@helpers/Icons/TextTemporary'
+import { RH, RW } from '@helpers/Responsive'
+import Docs from '@assets/Icons/TextTemporary'
 import PhoneInput from '../../components/Login/PhoneInput'
 import WelcomeTxt from '../../components/Login/WelcomeTxt'
 import NameInput from '@components/Login/NameInput'
@@ -13,7 +13,7 @@ export default function LoginPhone({ route, navigation }: any) {
   const [userMail, setUserMail] = useState('')
   const [activeBtn, setActiveBtn] = useState(false)
   const ToUserScreen = () => {
-    navigation.navigate('auth-pincode', { userMailTxt: true })
+    navigation.navigate(SCREENS.AUTH_CODE, { userMailTxt: true })
   }
 
   // ('auth-pincode', { userMailTxt: true })
@@ -21,7 +21,7 @@ export default function LoginPhone({ route, navigation }: any) {
   return (
     <View style={styles.container}>
       <View style={{ marginTop: 20 }}>
-        <GoBackBtn navigation={navigation} infoColor={false} />
+        <GoBackBtn  infoColor={false} />
       </View>
       <WelcomeTxt LoginviaEmail={route?.params?.LoginviaEmail} />
       {route?.params?.LoginviaEmail ? (
@@ -33,11 +33,11 @@ export default function LoginPhone({ route, navigation }: any) {
             setActiveBtn={setActiveBtn}
           />
           <View style={styles.devider} />
-          <ContinueBtn userName={userMail} navigation={navigation} address={ToUserScreen} />
+          <ContinueBtn userName={userMail} address={ToUserScreen} />
         </View>
       ) : (
         <View>
-          <PhoneInput navigation={navigation} />
+          <PhoneInput />
           <TouchableOpacity
             onPress={() => {
               navigation.navigate(SCREENS.RULES)

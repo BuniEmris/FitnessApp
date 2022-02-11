@@ -1,19 +1,25 @@
 import { View, Text, ImageBackground, TouchableOpacity } from 'react-native'
 import React from 'react'
-import BgImage from '@assets/image/bg.png'
+
 import { styles } from './styles'
-import MainText from '@helpers/Icons/OfferMainTxt'
-import FreeWeek from '@helpers/Icons/OfferFreeTxt'
+import MainText from '@assets/Icons/OfferMainTxt'
 import { PhoneComponentProps } from '../LoginScreen'
 import LoginButtons from '@components/Login/LoginButtons'
-import Cancel from '@helpers/Icons/CancelOffer'
-export default function Offer({ navigation }: PhoneComponentProps) {
+import Cancel from '@assets/Icons/CancelOffer'
+import { Assets } from '@constants/Icons/Assets'
+import { useNavigation } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
+import { SCREENS } from '@routes/navigations.types'
+
+export default function Offer({}: PhoneComponentProps) {
+  const navigation = useNavigation<StackNavigationProp<any, any>>()
+
   return (
-    <ImageBackground source={BgImage} resizeMode="cover" style={styles.imageBg}>
+    <ImageBackground source={Assets.bg} resizeMode="cover" style={styles.imageBg}>
       <View style={styles.container}>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('main')
+            navigation.navigate(SCREENS.MAIN)
           }}
           style={styles.cancel}>
           <Cancel />
@@ -30,7 +36,7 @@ export default function Offer({ navigation }: PhoneComponentProps) {
           </Text>
         </View>
         <View style={styles.btn}>
-          <LoginButtons offer={true} navigation={navigation} />
+          <LoginButtons offer={true} />
         </View>
       </View>
     </ImageBackground>

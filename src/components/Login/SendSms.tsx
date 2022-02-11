@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { RH } from '../../helpers/Responsive'
+import { RH } from '@helpers/Responsive'
 import BackgroundTimer from 'react-native-background-timer'
 type Iprop = {
   showErrorPin: boolean

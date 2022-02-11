@@ -1,13 +1,18 @@
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
-import React, {useState} from 'react';
-import {RH, RW} from '../../helpers/Responsive';
-import {TextInputMask} from 'react-native-masked-text';
-import VirtualKeyboard from 'react-native-virtual-keyboard';
-import {PhoneComponentProps} from '../../screens/Auth/LoginScreen';
-import NextBtn from '@helpers/Icons/NextBtn';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import React, { useState } from 'react'
+import { RH, RW } from '@helpers/Responsive'
+import { TextInputMask } from 'react-native-masked-text'
+import VirtualKeyboard from 'react-native-virtual-keyboard'
+import { PhoneComponentProps } from '@screens/Auth/LoginScreen'
+import NextBtn from '@assets/Icons/NextBtn'
+import { useNavigation } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
+import { SCREENS } from '@routes/navigations.types'
 
-export default function PhoneInput({navigation}: PhoneComponentProps) {
-  const [phoneInput, setPhoneInput] = useState('');
+export default function PhoneInput({}: PhoneComponentProps) {
+  const navigation = useNavigation<StackNavigationProp<any, any>>()
+
+  const [phoneInput, setPhoneInput] = useState('')
   return (
     <View>
       <View style={styles.inputContainer}>
@@ -17,7 +22,7 @@ export default function PhoneInput({navigation}: PhoneComponentProps) {
         <View style={styles.inputMaskContainer}>
           <TextInputMask
             type={'custom'}
-            options={{mask: '(999) 999-99-99'}}
+            options={{ mask: '(999) 999-99-99' }}
             value={phoneInput}
             editable={false}
             placeholder={'(978) 048-65-75'}
@@ -35,7 +40,7 @@ export default function PhoneInput({navigation}: PhoneComponentProps) {
       {phoneInput.length === 10 ? (
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('auth-pincode');
+            navigation.navigate(SCREENS.AUTH_CODE)
           }}
           style={styles.doneBtn}>
           <NextBtn />
@@ -44,7 +49,7 @@ export default function PhoneInput({navigation}: PhoneComponentProps) {
         <View />
       )}
     </View>
-  );
+  )
 }
 const styles = StyleSheet.create({
   inputContainer: {
@@ -108,4 +113,4 @@ const styles = StyleSheet.create({
     // bottom: RH(140),
     // left: RW(65),
   },
-});
+})

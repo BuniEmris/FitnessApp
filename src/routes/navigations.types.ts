@@ -16,5 +16,14 @@ export enum SCREENS {
   PROGRESS_USERDATA = 'collect-progress',
   USER_CALORIES = 'user-calories',
   OFFER = 'offer',
-  MAIN = 'main',
+
+  ///
+  HOME_TABS = 'home_tabs',
+  MAIN = 'Меню',
+  MARATHON = 'Марафон',
+  WORKOUT = 'Тренировка',
+  FEED = 'Лента',
+
+  //
+  VIDEO = 'Видео',
 }

@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { RH, RW } from '../../helpers/Responsive'
-import NextIcon from '../../assets/Icons/NextIcon'
+import { RH, RW } from '@helpers/Responsive'
+import NextIcon from '@assets/Icons/NextIcon'
 type IbtnInfoProps = {
   name: string
   value: any

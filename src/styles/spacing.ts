@@ -1,3 +1,7 @@
+/*
+ * @author GennadySX
+ * @created at 2022
+ **/
 export const EXTRA_TINY = 4
 export const TINY = 8
 export const SMALL = 12

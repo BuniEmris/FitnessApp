@@ -1,11 +1,11 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity} from 'react-native'
 import React, { useState } from 'react'
-import { RH, RW } from '../../../helpers/Responsive'
-import UserHeightText from '@helpers/Icons/UserHeightText'
-import Done from '@helpers/Icons/Done'
+import { RH, RW } from '@helpers/Responsive'
+import UserHeightText from '@assets/Icons/UserHeightText'
+import Done from '@assets/Icons/Done'
 // import RNListSlider from 'react-native-list-slider'
 import RNListSlider from './Slider/Index'
-import LinearGradient from 'react-native-linear-gradient'
+
 type OwnProps = {
   userHeight: any
   setUserHeight: any

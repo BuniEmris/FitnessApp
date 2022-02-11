@@ -1,16 +1,16 @@
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
-import React from 'react';
-import DatePicker from 'react-native-date-picker';
-import DoB from '@helpers/Icons/DoB';
-import Done from '@helpers/Icons/Done';
-import {RH} from '../../../helpers/Responsive';
+import { View, TouchableOpacity, StyleSheet } from 'react-native'
+import React from 'react'
+import DatePicker from 'react-native-date-picker'
+import DoB from '@assets/Icons/DoB'
+import Done from '@assets/Icons/Done'
+import { RH } from '@helpers/Responsive'
 
 type OwnProps = {
-  date: any;
-  setDate: any;
-};
+  date: any
+  setDate: any
+}
 
-export default function UserDoB({date, setDate}: OwnProps) {
+export default function UserDoB({ date, setDate }: OwnProps) {
   return (
     <View>
       <View style={styles.doB}>
@@ -23,7 +23,7 @@ export default function UserDoB({date, setDate}: OwnProps) {
         <Done />
       </TouchableOpacity>
     </View>
-  );
+  )
 }
 const styles = StyleSheet.create({
   doB: {
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})

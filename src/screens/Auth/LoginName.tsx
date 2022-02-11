@@ -1,19 +1,21 @@
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
-import React, { useEffect, useState } from 'react'
-import { RH, RW } from '../../helpers/Responsive'
-import SwitchSelector from 'react-native-switch-selector'
-import Introduction from '@helpers/Icons/Introduction'
-import Products from '@helpers/Icons/Products'
-import Continue from '@helpers/Icons/Continue'
+import { View, StyleSheet, TouchableOpacity } from 'react-native'
+import React, { useState } from 'react'
+import { RH, RW } from '@helpers/Responsive'
+import Introduction from '@assets/Icons/Introduction'
+import Products from '@assets/Icons/Products'
 import { PhoneComponentProps } from './LoginScreen'
 import HeaderName from '../../components/Login/HeaderName'
 import MySwitchSelector from '../../components/Login/MySwitchSelector'
 import NameInput from '../../components/Login/NameInput'
 import ContinueBtn from '@ui/Buttons/ContinueBtn'
 import { SCREENS } from '@routes/navigations.types'
-export default function LoginName({ navigation }: PhoneComponentProps) {
+import { useNavigation } from '@react-navigation/native'
+import { NativeStackNavigatorProps } from 'react-native-screens/lib/typescript/native-stack/types'
+export default function LoginName({}: PhoneComponentProps) {
+  const navigation = useNavigation<NativeStackNavigatorProps>()
+
   const [userName, setUserName] = useState('')
-  const [activeBtn, setActiveBtn] = useState(false)
+  const [activeBtn, setActiveBtn] = useState(false) // TODO
   const activeStatus = () => {
     console.log(userName, 'name of USer')
 
@@ -25,11 +27,11 @@ export default function LoginName({ navigation }: PhoneComponentProps) {
   }
 
   const ToUserScreen = () => {
-    navigation.navigate('user-info')
+    navigation.navigate(SCREENS.USER_INFO)
   }
   return (
     <View style={styles.container}>
-      <HeaderName navigation={navigation} color={false} />
+      <HeaderName color={false} />
       <View style={styles.intro}>
         <Introduction />
       </View>
@@ -45,7 +47,8 @@ export default function LoginName({ navigation }: PhoneComponentProps) {
         style={styles.products}>
         <Products />
       </TouchableOpacity>
-      <ContinueBtn userName={userName} navigation={navigation} address={ToUserScreen} />
+      <ContinueBtn userName={userName} address={ToUserScreen} />
+      {/*    TODO userName для чего ?*/}
     </View>
   )
 }

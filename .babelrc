@@ -27,7 +27,7 @@
           "@utils": "./src/utils",
           "@api": "./src/api",
           "@app": "./src/App",
-          "@mockups": "./src/mockups",
+          "@mocks": "./src/mocks",
           "@routes": "./src/routes",
           "@configs": "./src/config",
           "@json": "./src/json"

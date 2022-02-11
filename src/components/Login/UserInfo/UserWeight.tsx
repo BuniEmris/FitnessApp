@@ -1,9 +1,9 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
-import UserWhtTxt from '@helpers/Icons/UserWhtTxt'
+import UserWhtTxt from '@assets/Icons/UserWhtTxt'
 import { styles } from './UserHeight'
 import RNListSlider from './Slider/Index'
-import Done from '@helpers/Icons/Done'
+import Done from '@assets/Icons/Done'
 export default function UserWeight() {
   const [value, setValue] = useState(60)
   const onValueChanged = (val: any) => {

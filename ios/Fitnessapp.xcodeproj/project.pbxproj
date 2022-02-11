@@ -10,6 +10,7 @@
 		00E356F31AD99517003FC87E /* FitnessappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FitnessappTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2ACD4CBD27AE0C3500CAF6C0 /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACD4CBC27AE0C3500CAF6C0 /* ImageAssets.xcassets */; };
 		3675BCF4185C4430B9753BFC /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2603A987DC894A7C96A829AB /* Gilroy-Light.otf */; };
 		438ED00A99AD431199A85802 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 7BF42A11D9E1428F95DE313C /* SFPRODISPLAYMEDIUM.OTF */; };
 		4DB617BC4FC949BCA016A709 /* SFPRODISPLAYBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = DCEE5882B1BA4972862E73F0 /* SFPRODISPLAYBOLD.OTF */; };
@@ -81,7 +82,6 @@
 		13B07F961A680F5B00A75B9A /* Fitnessapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitnessapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Fitnessapp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Fitnessapp/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Fitnessapp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Fitnessapp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Fitnessapp/main.m; sourceTree = "<group>"; };
 		1A24F2257ED140F2858B876B /* Gilroy-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-BlackItalic.ttf"; path = "../src/assets/fonts/Gilroy-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -90,6 +90,7 @@
 		223D6B10CD3C4CEC8FDEC324 /* FontsFree-Net-SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FontsFree-Net-SFProDisplay-Regular.ttf"; path = "../src/assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		25BFB0A13DD541F7B03386EB /* Gilroy-UltraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-UltraLight.ttf"; path = "../src/assets/fonts/Gilroy-UltraLight.ttf"; sourceTree = "<group>"; };
 		2603A987DC894A7C96A829AB /* Gilroy-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Light.otf"; path = "../src/assets/fonts/Gilroy-Light.otf"; sourceTree = "<group>"; };
+		2ACD4CBC27AE0C3500CAF6C0 /* ImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageAssets.xcassets; sourceTree = "<group>"; };
 		2ADA422787CC4FFF968C9EBD /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-SemiBold.ttf"; path = "../src/assets/fonts/Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
 		3996224466F04D1980D7428C /* SFPRODISPLAYLIGHTITALIC.OTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SFPRODISPLAYLIGHTITALIC.OTF; path = ../src/assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF; sourceTree = "<group>"; };
 		4460D607441D406EA5018CA1 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Light.ttf"; path = "../src/assets/fonts/Gilroy-Light.ttf"; sourceTree = "<group>"; };
@@ -165,10 +166,10 @@
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
-				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				2ACD4CBC27AE0C3500CAF6C0 /* ImageAssets.xcassets */,
 			);
 			name = Fitnessapp;
 			sourceTree = "<group>";
@@ -421,6 +422,7 @@
 				77E4BDD7C9EA48F6A064988F /* SFPRODISPLAYLIGHTITALIC.OTF in Resources */,
 				438ED00A99AD431199A85802 /* SFPRODISPLAYMEDIUM.OTF in Resources */,
 				9140F598BEBB4955B18C519F /* SFPRODISPLAYREGULAR.OTF in Resources */,
+				2ACD4CBD27AE0C3500CAF6C0 /* ImageAssets.xcassets in Resources */,
 				4E7EEA90E4C348349E181ED9 /* SFPRODISPLAYSEMIBOLDITALIC.OTF in Resources */,
 				9E6615E5AC9B4D5A8D969452 /* SFPRODISPLAYTHINITALIC.OTF in Resources */,
 				8281C6A03D044F4EAEDAE12F /* SFPRODISPLAYULTRALIGHTITALIC.OTF in Resources */,
@@ -611,6 +613,7 @@
 			baseConfigurationReference = 2018CD206F4D3804494CE087 /* Pods-Fitnessapp-FitnessappTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = MC7XQCZV87;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -639,6 +642,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = MC7XQCZV87;
 				INFOPLIST_FILE = FitnessappTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -662,8 +666,11 @@
 			baseConfigurationReference = BFFD94C72A88148CC8F35AA1 /* Pods-Fitnessapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = MC7XQCZV87;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Fitnessapp/Info.plist;
@@ -671,6 +678,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.10;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -678,6 +686,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.innetech.fitness;
 				PRODUCT_NAME = Fitnessapp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -689,14 +698,16 @@
 			baseConfigurationReference = EEE079DCC56460C5F11EBBED /* Pods-Fitnessapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = MC7XQCZV87;
 				INFOPLIST_FILE = Fitnessapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.10;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

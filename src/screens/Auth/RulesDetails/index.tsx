@@ -1,22 +1,21 @@
-import { View, Text, ScrollView, Dimensions } from 'react-native'
-import React, { useState } from 'react'
+import { View, Text, ScrollView } from 'react-native'
+import React from 'react'
 import GoBackBtn from '@ui/Buttons/GoBackBtn'
-import RulesDetailTxt from '@helpers/Icons/RulesDetails'
 import { PhoneComponentProps } from '../LoginScreen'
 import { styles } from './styles'
 import { typography } from '@styles/typography'
-const { height } = Dimensions.get('window')
-export default function RulesDetails({ navigation }: PhoneComponentProps) {
-  const [shadowActive, setshadowActive] = useState(false)
+
+export default function RulesDetails({}: PhoneComponentProps) {
+  // const [shadowActive, setshadowActive] = useState(false)
   const onContentSizeChange = (contentHeight: any) => {
     if (contentHeight > 0) {
-      setshadowActive(true)
+      // setshadowActive(true) TODO @buniEmris и зачем же если нигде используешь shadowActive ???
     }
   }
   return (
     <View style={styles.container}>
       <View style={{ marginTop: 20 }}>
-        <GoBackBtn navigation={navigation} infoColor={false} />
+        <GoBackBtn infoColor={false} />
       </View>
       <View style={styles.shadowInActiveText}>
         <Text style={typography.largeBold}>Политика конфиденциальности</Text>

@@ -1,13 +1,18 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { styles } from './styles'
-import ProgressTx from '@helpers/Icons/ProgressTx'
-import ProgressBtm from '@helpers/Icons/ProgressBtm'
+import ProgressTx from '@assets/Icons/ProgressTx'
+import ProgressBtm from '@assets/Icons/ProgressBtm'
 // import * as Progress from 'react-native-progress'
 import ArcSlider from 'rn-arc-slider'
 import { PhoneComponentProps } from '../LoginScreen'
 import { SCREENS } from '@routes/navigations.types'
-export default function ProgressData({ navigation }: PhoneComponentProps) {
+import { useNavigation } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
+
+export default function ProgressData({}: PhoneComponentProps) {
+  const navigation = useNavigation<StackNavigationProp<any, any>>()
+
   const [value, setValue] = useState(67)
   useEffect(() => {
     if (value === 100) {

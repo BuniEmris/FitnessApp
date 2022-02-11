@@ -1,9 +1,8 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React, { useState } from 'react'
-import { RH, RW } from '../../helpers/Responsive'
+import { RH, RW } from '@helpers/Responsive'
 
 export default function WelcomeTxt({ LoginviaEmail }: any) {
-  const [phone, setPhone] = useState(true)
   return (
     <View>
       <Text style={styles.welcomeTxt}>
