@@ -5,6 +5,8 @@ import AppleIcon from '@assets/Icons/AppleIcon'
 import { useNavigation } from '@react-navigation/native'
 import { SCREENS } from '@routes/navigations.types'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import { PhoneComponentProps } from '@screens/Auth/LoginScreen'
+import { typography } from '@styles/typography'
 
 type IButtonProps = {
   btnText: string
@@ -71,6 +73,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   smsBtnText: {
+    // fontFamily: typography.medium,
     fontSize: RW(15),
     fontWeight: '600',
     color: 'black',
