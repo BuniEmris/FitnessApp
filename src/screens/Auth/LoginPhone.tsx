@@ -16,8 +16,6 @@ export default function LoginPhone({ route, navigation }: any) {
     navigation.navigate(SCREENS.AUTH_CODE, { userMailTxt: true })
   }
 
-  // ('auth-pincode', { userMailTxt: true })
-
   return (
     <View style={styles.container}>
       <View style={{ marginTop: 20 }}>
@@ -33,7 +31,7 @@ export default function LoginPhone({ route, navigation }: any) {
             setActiveBtn={setActiveBtn}
           />
           <View style={styles.devider} />
-          <ContinueBtn userName={userMail} address={ToUserScreen} />
+          <ContinueBtn  onPress={ToUserScreen} />
         </View>
       ) : (
         <View>

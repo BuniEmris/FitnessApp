@@ -1,21 +1,19 @@
-import React ,{ useEffect, useState }  from 'react'
-import { View, ImageBackground, StyleSheet } from 'react-native'
-import { RW } from '@helpers/Responsive'
+import React, { useEffect, useState } from 'react'
+import { View, Text, ImageBackground, TouchableOpacity, StyleSheet, Modal } from 'react-native'
+import { RH, RW } from '@helpers/Responsive'
 import MainText from '@assets/Icons/MainText'
 import LoginButtons from '@components/Login/LoginButtons'
 import { Assets } from '@constants/Icons/Assets'
 import NetInfo from '@react-native-community/netinfo'
-import { Colors } from '@styles'
-
 export type PhoneComponentProps = {}
 
-export default function LoginScreen({  }: PhoneComponentProps) {
+export default function LoginScreen({}: PhoneComponentProps) {
   const [online, setOnline] = useState(true)
   const [modalVisible, setModalVisible] = useState(true)
 
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener(state => {
-      setOnline(state.isConnected)
+      setOnline(!!state?.isConnected)
     })
     // SplashScreen.hide();
     return () => unsubscribe()

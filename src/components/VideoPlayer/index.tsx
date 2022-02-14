@@ -28,8 +28,7 @@ export const VideoPlayer = ({ poster, closeModal }: VideoPlayerProps) => {
     if (isAndroid) {
       VideoPlayerRef?.onOpen(VideoMock.music)
     } else {
-      closeModal && closeModal()
-      navigation.navigate(SCREENS.VIDEO, { uri: VideoMock.music })
+      VideoPlayerRef?.onOpen(VideoMock.music, () => closeModal && closeModal())
     }
   }
   return (

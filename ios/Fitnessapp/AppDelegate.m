@@ -3,6 +3,8 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import "RNBootSplash.h"
+#import <AVFoundation/AVFoundation.h>
 #import "Orientation.h"
 
 #ifdef FB_SONARKIT_ENABLED
@@ -43,11 +45,21 @@ static void InitializeFlipper(UIApplication *application) {
       rootView.backgroundColor = [UIColor whiteColor];
   }
 
+  
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+
+
+  UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"BootSplash" bundle:nil];
+  UIViewController * buddiesOrFacebook = [storyboard   instantiateViewControllerWithIdentifier:@"BootSplash"] ;
+  
+  [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
+  
+  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+  
   return YES;
 }
 

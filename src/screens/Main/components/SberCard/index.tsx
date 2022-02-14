@@ -24,7 +24,7 @@ export const SberCard: FC = () => {
     <View style={styles.block}>
       <Svg source={IconsSVG.SberLogo} />
       <Text style={styles.desc}>Покупай продукты на день в один клик !</Text>
-      <View style={{ top: 45 }}>
+      <View style={{ top: 25 }}>
         <PrimaryButton
           style={[styles.btn]}
           onPress={onShowModal}
@@ -56,7 +56,7 @@ export const SberCard: FC = () => {
               <View
                 style={{
                   alignItems: 'center',
-                  bottom: 250,
+                  bottom: 260,
                 }}>
                 <PrimaryButton
                   style={styles.btn}

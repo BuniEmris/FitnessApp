@@ -39,7 +39,7 @@ export const MenuItemCard = ({ product, style }: MenuItemCardProps) => {
       <Image source={{ uri: product.imgUri }} style={_style.img} />
       <ProductModal
         item={product}
-        onClose={() => setVisibilityModal(false)}
+        onClose={() => setVisibilityModal(!visibleModal)}
         isVisible={visibleModal}
       />
     </TouchableOpacity>

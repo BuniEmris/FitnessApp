@@ -4,7 +4,7 @@
  **/
 
 import React, { createRef, ReactChild, ReactChildren, ReactNode } from 'react'
-import { StatusBar } from 'react-native'
+import { StatusBar, View } from "react-native";
 import { Colors } from '@styles/index'
 import { SafeAreaProvider } from 'react-native-safe-area-context/src/SafeAreaContext'
 import { VideoModal, VideoModalProps } from '@components/VideoModal'
@@ -16,11 +16,16 @@ export let VideoPlayerRef = createRef<VideoModalProps>().current
 export const AppBlock = ({ children }: AppBlockProps) => {
   return (
     <>
+
+      <VideoModal ref={ref => (VideoPlayerRef = ref)} />
+
+
       <SafeAreaProvider>
         <StatusBar barStyle={'dark-content'} backgroundColor={Colors.WHITE} />
+
         {children}
-        <VideoModal ref={ref => (VideoPlayerRef = ref)} />
       </SafeAreaProvider>
+
     </>
   )
 }
