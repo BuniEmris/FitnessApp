@@ -1,13 +1,9 @@
-import { View, TouchableOpacity } from 'react-native'
+import { View, TouchableOpacity, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import SelectMultiple from 'react-native-select-multiple'
 import { styles } from './styles'
-import Done from '@assets/Icons/Done'
 import { PhoneComponentProps } from '@screens/Auth/LoginScreen'
 import { Assets } from '@constants/Icons/Assets'
-import { useNavigation } from '@react-navigation/native'
-import { StackNavigationProp } from '@react-navigation/stack'
-import {SCREENS} from "@routes/navigations.types";
 
 const products = [
   'Коровье молоко',
@@ -21,8 +17,6 @@ const products = [
   'Каштаны',
 ]
 export default function SelectAllergicList({}: PhoneComponentProps) {
-  const navigation = useNavigation<StackNavigationProp<any, any>>()
-
   const [selectedProducts, setSelectedProducts] = useState([])
   const onSelectionsChange = (val: any) => {
     setSelectedProducts(val)
@@ -42,9 +36,6 @@ export default function SelectAllergicList({}: PhoneComponentProps) {
         labelStyle={styles.labelStyle}
         selectedLabelStyle={styles.selectedLabelStyle}
       />
-      <TouchableOpacity onPress={() => navigation.navigate(SCREENS.USER_INFO)} style={styles.btn}>
-        <Done />
-      </TouchableOpacity>
     </View>
   )
 }

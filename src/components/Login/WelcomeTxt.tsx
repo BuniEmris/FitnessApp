@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet } from 'react-native'
-import React, { useState } from 'react'
-import { RH, RW } from '@helpers/Responsive'
+import { View, Text } from 'react-native'
+import React from 'react'
+import { styles } from './textstyles'
 
 export default function WelcomeTxt({ LoginviaEmail }: any) {
   return (
@@ -14,22 +14,3 @@ export default function WelcomeTxt({ LoginviaEmail }: any) {
     </View>
   )
 }
-const styles = StyleSheet.create({
-  welcomeTxt: {
-    marginTop: RH(25),
-    color: '#828282',
-    fontSize: RW(20),
-    fontWeight: '400',
-    lineHeight: RH(23),
-    alignItems: 'center',
-  },
-  enterPhoneTxt: {
-    marginTop: RH(10),
-    width: RW(358),
-    height: RH(72),
-    fontSize: RW(30),
-    fontWeight: 'bold',
-    lineHeight: RH(35),
-    color: '#333333',
-  },
-})

@@ -7,6 +7,7 @@ import { SCREENS } from '@routes/navigations.types'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { PhoneComponentProps } from '@screens/Auth/LoginScreen'
 import { typography } from '@styles/typography'
+import { styles } from './styles'
 
 type IButtonProps = {
   btnText: string
@@ -49,7 +50,7 @@ type IProps = {
 }
 export default function LoginButtons({ offer }: IProps) {
   return (
-    <View>
+    <View style={styles.BtnContainers}>
       {offer ? (
         <LoginBtns btnText="БЕСПЛАТНАЯ ПРОБНАЯ ВЕРСИЯ НА 7 ДНЕЙ" mailDesign={false} icon={false} />
       ) : (
@@ -62,39 +63,3 @@ export default function LoginButtons({ offer }: IProps) {
     </View>
   )
 }
-const styles = StyleSheet.create({
-  smsBtn: {
-    marginTop: RH(20),
-    width: RW(360),
-    height: RH(60),
-    borderRadius: RW(15),
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  smsBtnText: {
-    // fontFamily: typography.medium,
-    fontSize: RW(15),
-    fontWeight: '600',
-    color: 'black',
-    lineHeight: RH(21),
-    marginLeft: RW(10),
-  },
-  mailBtn: {
-    marginVertical: RH(20),
-    width: RW(360),
-    height: RH(60),
-    borderRadius: RW(15),
-    borderWidth: 1,
-    borderColor: '#ffffff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  mailBtnText: {
-    // fontFamily: 'Gilroy-Medium',
-    fontSize: RW(18),
-    fontWeight: '600',
-    color: 'white',
-    lineHeight: RH(21),
-  },
-})

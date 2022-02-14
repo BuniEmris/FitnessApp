@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { RH } from '@helpers/Responsive'
 import BackgroundTimer from 'react-native-background-timer'
+import { styles } from './styles'
 type Iprop = {
   showErrorPin: boolean
   setShowErrorPin: Function
@@ -65,18 +65,3 @@ export default function SendSms({ showErrorPin, setShowErrorPin }: Iprop) {
     </View>
   )
 }
-const styles = StyleSheet.create({
-  SmsContainer: {
-    alignItems: 'center',
-    marginTop: RH(328),
-  },
-  smsText: {
-    color: '#828282',
-    fontSize: 16,
-    fontWeight: '300',
-  },
-  timer: {
-    color: '#565FFF',
-    fontSize: 16,
-  },
-})

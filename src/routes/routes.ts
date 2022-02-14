@@ -19,7 +19,7 @@ import Rules from '@screens/Auth/Rules'
 import Calories from '@screens/Auth/Calories'
 import Offer from '@screens/Auth/Offer'
 import RulesDetails from '@screens/Auth/RulesDetails'
-import LoginUserInfo from "@screens/Auth/LoginUserInfo";
+import LoginUserInfo from '@screens/Auth/LoginUserInfo'
 
 export type ScreenProps = Parameters<typeof Stack['Screen']>[number]
 

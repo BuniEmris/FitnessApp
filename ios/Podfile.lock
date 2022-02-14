@@ -414,7 +414,7 @@ PODS:
     - React
   - SRSRadialGradient (1.0.9):
     - React
-  - TOCropViewController (2.6.0)
+  - TOCropViewController (2.6.1)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -678,10 +678,10 @@ SPEC CHECKSUMS:
   RNScreens: d6da2b9e29cf523832c2542f47bf1287318b1868
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   SRSRadialGradient: 49ba49a7a8f257c3fe785c250867b07185d1d01e
-  TOCropViewController: 3105367e808b7d3d886a74ff59bf4804e7d3ab38
+  TOCropViewController: edfd4f25713d56905ad1e0b9f5be3fbe0f59c863
   Yoga: 5cbf25add73edb290e1067017690f7ebf56c5468
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 240c96b643a46cb159ab5bb13b60a772d4e04d02
+PODFILE CHECKSUM: 61fa3f8e3487f616b092f199ea37c6049c8be980
 
 COCOAPODS: 1.11.2

@@ -3,15 +3,15 @@ import React, { useState } from 'react'
 import { RH, RW } from '@helpers/Responsive'
 import Introduction from '@assets/Icons/Introduction'
 import Products from '@assets/Icons/Products'
-import { PhoneComponentProps } from './LoginScreen'
-import HeaderName from '../../components/Login/HeaderName'
-import MySwitchSelector from '../../components/Login/MySwitchSelector'
-import NameInput from '../../components/Login/NameInput'
+import HeaderName from '@components/Login/HeaderName'
+import MySwitchSelector from '@components/Login/MySwitchSelector'
+import NameInput from '@components/Login/NameInput'
 import ContinueBtn from '@ui/Buttons/ContinueBtn'
 import { SCREENS } from '@routes/navigations.types'
 import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigatorProps } from 'react-native-screens/lib/typescript/native-stack/types'
-export default function LoginName({}: PhoneComponentProps) {
+import { styles } from './styles'
+export default function LoginName({}) {
   const navigation = useNavigation<NativeStackNavigatorProps>()
 
   const [userName, setUserName] = useState('')
@@ -48,25 +48,7 @@ export default function LoginName({}: PhoneComponentProps) {
         <Products />
       </TouchableOpacity>
       <ContinueBtn userName={userName} address={ToUserScreen} />
-      {/*    TODO userName для чего ?*/}
+      {/*    TODO userName для чего ?  dlya disable enable btn */}
     </View>
   )
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    paddingHorizontal: RW(17),
-    paddingTop: RH(17),
-  },
-  intro: {
-    marginTop: RH(25),
-    marginBottom: RH(30),
-  },
-
-  products: {
-    marginTop: RH(160),
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-})

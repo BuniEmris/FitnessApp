@@ -5,7 +5,7 @@ import Skip from '@assets/Icons/Skip'
 import { SCREENS } from '@routes/navigations.types'
 import { useNavigation } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
-
+import { hasNotch } from '@utils/normalizer'
 type IOwnProps = {
   color: boolean
 }
@@ -17,7 +17,7 @@ export default function HeaderName({ color }: IOwnProps) {
       style={{
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 20,
+        marginTop: hasNotch ? 40 : 20,
       }}>
       <GoBackBtn infoColor={color} />
       <TouchableOpacity

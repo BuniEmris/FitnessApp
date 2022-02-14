@@ -4,6 +4,7 @@ import { RH, RW } from '@helpers/Responsive'
 import GoalText from '@assets/Icons/GoalText'
 import GoalBtn from '@assets/Icons/GoalBtn'
 import Done from '@assets/Icons/Done'
+import { styles } from './styles'
 
 export default function UserGoal() {
   return (
@@ -20,25 +21,3 @@ export default function UserGoal() {
     </View>
   )
 }
-export const styles = StyleSheet.create({
-  containerSlider: {
-    marginTop: RH(20),
-    // flex: 1,
-    // width: '100%',
-
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    backgroundColor: 'white',
-  },
-  headerText: {
-    marginTop: RH(60),
-    marginLeft: RW(20),
-  },
-  btn: {
-    width: RW(287),
-    height: RH(70),
-    marginTop: RH(50),
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})

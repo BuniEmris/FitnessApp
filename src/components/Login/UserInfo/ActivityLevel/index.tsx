@@ -18,11 +18,11 @@ export default function ActivityLevel({ calory }: IProps) {
       <Text style={styles.headerText}>
         {calory ? 'Выбери сам, передвигая ползунок' : 'Увровень физической нагрузки'}
       </Text>
-      <View style={level.value === '5' ? styles.circleMinInactive : styles.circleMinActive}>
+      <View style={styles.circleMinActive}>
         <Text style={styles.circleMinTxt}>Min</Text>
       </View>
-      <View style={level.value === '5' ? styles.circleMaxActive : styles.circleMaxInActive}>
-        <Text style={styles.circleMinTxt}>Max</Text>
+      <View style={level >= 4 ? styles.circleMaxActive : styles.circleMaxInActive}>
+        <Text style={styles.circleMaxTxt}>Max</Text>
       </View>
       <View style={styles.sliderContainer}>
         {!calory ? (
@@ -32,27 +32,32 @@ export default function ActivityLevel({ calory }: IProps) {
             thumbStyle={{
               backgroundColor: '#FA5C01',
               bottom: 60,
-              width: 30,
-              height: 30,
-              borderRadius: 10,
+              width: 6,
+              height: 20,
+              borderTopRightRadius: 0,
             }}
-            thumbTouchSize={{ height: 90 }}
+            thumbTouchSize={{ height: 90, width: 0 }}
             thumbImage={thumbImage}
             trackMarks={trackData}
-            // trackStyle={{ backgroundColor: 'red', width: 10, height: 10 }}
             thumbTintColor={'blue'}
             animateTransitions={true}
-            renderTrackMarkComponent={(index: number) => (
-              <View
-                style={{
-                  borderRadius: 10,
-                  width: 10,
-                  height: 10,
-                  backgroundColor: index === Number(trackData) ? 'grey' : 'red',
-                }}>
-                {/* <Text>{index}</Text> */}
-              </View>
-            )}
+            renderTrackMarkComponent={(index: number) => {
+              const currentMarkValue = trackData[index]
+              const currentSliderValue = level || (Array.isArray(level) && level[0]) || 0
+
+              return (
+                <View
+                  style={{
+                    borderRadius: 10,
+                    width: 10,
+                    height: 10,
+                    backgroundColor:
+                      currentMarkValue > Math.max(currentSliderValue) ? '#C4C4C4' : '#FA5C01',
+                  }}>
+                  {/* <Text>{index}</Text> */}
+                </View>
+              )
+            }}
             minimumTrackTintColor="#FA5C01"
             maximumValue={4}
             minimumValue={0}
@@ -71,22 +76,10 @@ export default function ActivityLevel({ calory }: IProps) {
               height: 30,
               borderRadius: 10,
             }}
-            thumbTouchSize={{ height: 90 }}
+            thumbTouchSize={{ height: 90, width: 1 }}
             thumbImage={caloryImage}
-            // trackMarks={trackData}
             thumbTintColor={'blue'}
             animateTransitions={true}
-            // renderTrackMarkComponent={(index: number) => (
-            //   <View
-            //     style={{
-            //       borderRadius: 10,
-            //       width: 10,
-            //       height: 10,
-            //       backgroundColor: index === Number(trackData) ? 'grey' : 'red',
-            //     }}>
-            //     {/* <Text>{index}</Text> */}
-            //   </View>
-            // )}
             minimumTrackTintColor="#FA5C01"
             maximumValue={4}
             minimumValue={0}

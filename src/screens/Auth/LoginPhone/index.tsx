@@ -3,12 +3,13 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import GoBackBtn from '@ui/Buttons/GoBackBtn'
 import { RH, RW } from '@helpers/Responsive'
 import Docs from '@assets/Icons/TextTemporary'
-import PhoneInput from '../../components/Login/PhoneInput'
-import WelcomeTxt from '../../components/Login/WelcomeTxt'
+import PhoneInput from '@components/Login/PhoneInput'
+import WelcomeTxt from '@components/Login/WelcomeTxt'
 import NameInput from '@components/Login/NameInput'
 import ContinueBtn from '@ui/Buttons/ContinueBtn'
 import { SCREENS } from '@routes/navigations.types'
-
+import { styles } from './styles'
+import { hasNotch } from '@utils/normalizer'
 export default function LoginPhone({ route, navigation }: any) {
   const [userMail, setUserMail] = useState('')
   const [activeBtn, setActiveBtn] = useState(false)
@@ -20,8 +21,8 @@ export default function LoginPhone({ route, navigation }: any) {
 
   return (
     <View style={styles.container}>
-      <View style={{ marginTop: 20 }}>
-        <GoBackBtn  infoColor={false} />
+      <View style={{ marginTop: hasNotch ? 40 : 20 }}>
+        <GoBackBtn infoColor={false} />
       </View>
       <WelcomeTxt LoginviaEmail={route?.params?.LoginviaEmail} />
       {route?.params?.LoginviaEmail ? (
@@ -50,18 +51,3 @@ export default function LoginPhone({ route, navigation }: any) {
     </View>
   )
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    paddingHorizontal: RW(17),
-    paddingTop: RH(17),
-  },
-
-  docsBtn: {
-    marginTop: RH(50),
-  },
-  devider: {
-    marginTop: RH(200),
-  },
-})

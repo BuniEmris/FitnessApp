@@ -1,4 +1,5 @@
 import { RH, RW } from '@helpers/Responsive'
+import { hasNotch } from '@utils/normalizer'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
@@ -10,12 +11,13 @@ export const styles = StyleSheet.create({
   },
   intro: {
     marginTop: RH(25),
-    marginBottom: RH(30),
+    marginBottom: RH(5),
   },
   btn: {
     width: RW(287),
     height: RH(70),
     marginTop: RH(60),
+    marginBottom: RH(40),
     marginLeft: RW(30),
     alignItems: 'center',
     justifyContent: 'center',

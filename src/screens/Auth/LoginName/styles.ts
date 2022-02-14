@@ -1,5 +1,4 @@
 import { RH, RW } from '@helpers/Responsive'
-import { typography } from '@styles/typography'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
@@ -8,5 +7,15 @@ export const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingHorizontal: RW(17),
     paddingTop: RH(17),
+  },
+  intro: {
+    marginTop: RH(25),
+    marginBottom: RH(30),
+  },
+
+  products: {
+    marginTop: RH(160),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 })

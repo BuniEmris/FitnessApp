@@ -18,8 +18,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   selectedCheckboxStyle: {
-    width: RW(40),
-    height: RH(40),
+    width: RW(30),
+    height: RH(30),
     alignItems: 'center',
     justifyContent: 'center',
     // backgroundColor: '#FA5C01',
@@ -33,13 +33,5 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '600',
     color: '#4F4F4F',
-  },
-  btn: {
-    width: RW(287),
-    height: RH(70),
-    marginTop: RH(20),
-    marginLeft: RW(30),
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 })

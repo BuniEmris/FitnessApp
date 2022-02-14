@@ -1,4 +1,4 @@
-import { View} from 'react-native'
+import { View } from 'react-native'
 import React, { useState } from 'react'
 import SwitchSelector from 'react-native-switch-selector'
 
@@ -27,9 +27,6 @@ export default function MySwitchSelector({ calory }: Iprops) {
             { label: '1400', value: '1400' },
             { label: '1500', value: '1500' },
           ]}
-
-          // testID="gender-switch-selector"
-          // accessibilityLabel="gender-switch-selector"
         />
       ) : (
         <SwitchSelector

@@ -1,13 +1,16 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import UserWhtTxt from '@assets/Icons/UserWhtTxt'
-import { styles } from './UserHeight'
+import { styles } from './UserHeight/styles'
 import RNListSlider from './Slider/Index'
 import Done from '@assets/Icons/Done'
-export default function UserWeight() {
-  const [value, setValue] = useState(60)
+type OwnProps = {
+  userWeight: any
+  setUserWeight: any
+}
+export default function UserWeight({ userWeight, setUserWeight }: OwnProps) {
   const onValueChanged = (val: any) => {
-    setValue(val)
+    setUserWeight(val)
   }
   return (
     <View>
@@ -15,11 +18,11 @@ export default function UserWeight() {
         <UserWhtTxt />
       </View>
       <View style={styles.containerSlider}>
-        <Text style={styles.textValue}>{value}</Text>
+        <Text style={styles.textValue}>{userWeight}</Text>
         <RNListSlider
           multiplicity={1}
           arrayLength={240}
-          value={value}
+          value={userWeight}
           onValueChange={onValueChanged}
         />
         <TouchableOpacity style={styles.btn}>

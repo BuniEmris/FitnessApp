@@ -4,6 +4,7 @@ import DatePicker from 'react-native-date-picker'
 import DoB from '@assets/Icons/DoB'
 import Done from '@assets/Icons/Done'
 import { RH } from '@helpers/Responsive'
+import { styles } from './styles'
 
 type OwnProps = {
   date: any
@@ -25,15 +26,3 @@ export default function UserDoB({ date, setDate }: OwnProps) {
     </View>
   )
 }
-const styles = StyleSheet.create({
-  doB: {
-    marginTop: RH(60),
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  doBPicker: {
-    marginTop: RH(30),
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})

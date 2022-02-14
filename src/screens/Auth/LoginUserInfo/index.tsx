@@ -5,24 +5,24 @@ import UserIntro from '@assets/Icons/UserIntro'
 import UserInfoBtn from '@components/Login/UserInfoBtn'
 import Continue from '@assets/Icons/Continue'
 import BottomSheet from 'react-native-gesture-bottom-sheet'
-import { PhoneComponentProps } from './LoginScreen'
-import HeaderName from '../../components/Login/HeaderName'
-import UserDoB from '../../components/Login/UserInfo/UserDoB'
-import UserHeight from '../../components/Login/UserInfo/UserHeight'
+import HeaderName from '@components/Login/HeaderName'
+import UserDoB from '@components/Login/UserInfo/UserDoB'
+import UserHeight from '@components/Login/UserInfo/UserHeight'
 import UserWeight from '@components/Login/UserInfo/UserWeight'
 import { SCREENS } from '@routes/navigations.types'
 import ActivityLevel from '@components/Login/UserInfo/ActivityLevel'
 import UserGoal from '@components/Login/UserInfo/UserGoal'
 import { useNavigation } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
+import { styles } from './styles'
 
-export default function LoginUserInfo({}: PhoneComponentProps) {
+export default function LoginUserInfo({}) {
   const navigation = useNavigation<StackNavigationProp<any, any>>()
 
   const bottomSheet = useRef()
-  // const refRBSheet = useRef()
   const [date, setDate] = useState(new Date())
   const [userHeight, setUserHeight] = useState(175)
+  const [userWeight, setUserWeight] = useState(60)
   const [step, setStep] = useState(1)
 
   return (
@@ -73,7 +73,7 @@ export default function LoginUserInfo({}: PhoneComponentProps) {
         <BottomSheet sheetBackgroundColor={'white'} hasDraggableIcon ref={bottomSheet} height={600}>
           {step === 1 && <UserDoB date={date} setDate={setDate} />}
           {step === 2 && <UserHeight userHeight={userHeight} setUserHeight={setUserHeight} />}
-          {step === 3 && <UserWeight />}
+          {step === 3 && <UserWeight userWeight={userWeight} setUserWeight={setUserWeight} />}
           {step === 4 && <UserGoal />}
         </BottomSheet>
         <View style={{ marginVertical: 32 }}>
@@ -90,15 +90,3 @@ export default function LoginUserInfo({}: PhoneComponentProps) {
     </View>
   )
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    paddingHorizontal: RW(17),
-    paddingTop: RH(17),
-  },
-  intro: {
-    marginTop: RH(25),
-    marginBottom: RH(30),
-  },
-})

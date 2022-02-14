@@ -14,7 +14,7 @@ export default function RulesDetails({}: PhoneComponentProps) {
   }
   return (
     <View style={styles.container}>
-      <View style={{ marginTop: 20 }}>
+      <View style={{ marginTop: 40 }}>
         <GoBackBtn infoColor={false} />
       </View>
       <View style={styles.shadowInActiveText}>

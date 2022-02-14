@@ -1,5 +1,6 @@
 import { RH, RW } from '@helpers/Responsive'
 import { PRIMARY } from '@styles/colors'
+import { hasNotch } from '@utils/normalizer'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
@@ -7,24 +8,26 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#000000c0',
     width: '100%',
-    justifyContent: 'flex-end',
-    // opacity: 0.6,
+    alignItems: 'flex-end',
+    justifyContent: 'center',
   },
   imageBg: {
     flex: 1,
   },
   cancel: {
-    marginBottom: RH(320),
-    marginLeft: RW(340),
+    marginTop: hasNotch ? 40 : 20,
+    marginRight: RW(10),
+    marginBottom: RH(350),
   },
   mainText: {
-    marginLeft: RW(10),
+    marginRight: RW(70),
     fontWeight: '600',
     marginVertical: RH(10),
   },
   mainTextContainer: {
     height: RH(100),
     width: RW(360),
+    marginRight: RW(10),
   },
   freeText: {
     fontSize: 24,
@@ -50,7 +53,7 @@ export const styles = StyleSheet.create({
     color: 'white',
   },
   btn: {
-    marginLeft: RW(10),
+    marginRight: RW(10),
     marginBottom: RW(30),
     justifyContent: 'center',
   },
