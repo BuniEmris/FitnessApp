@@ -19,7 +19,7 @@ export default function Offer({}: PhoneComponentProps) {
       <View style={styles.container}>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate(SCREENS.MAIN)
+            navigation.navigate(SCREENS.HOME_TABS)
           }}
           style={styles.cancel}>
           <Cancel />

@@ -16,7 +16,7 @@ export default function ProgressData({}: PhoneComponentProps) {
   const [value, setValue] = useState(67)
   useEffect(() => {
     if (value === 100) {
-      navigation.navigate(SCREENS.MAIN)
+      navigation.navigate(SCREENS.HOME_TABS)
     }
   }, [value])
 

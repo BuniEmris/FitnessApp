@@ -10,6 +10,7 @@
 		00E356F31AD99517003FC87E /* FitnessappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FitnessappTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2AC17F6427B9468F000F350D /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC17F6327B9468F000F350D /* BootSplash.storyboard */; };
 		2ACD4CBD27AE0C3500CAF6C0 /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACD4CBC27AE0C3500CAF6C0 /* ImageAssets.xcassets */; };
 		3675BCF4185C4430B9753BFC /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2603A987DC894A7C96A829AB /* Gilroy-Light.otf */; };
 		438ED00A99AD431199A85802 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 7BF42A11D9E1428F95DE313C /* SFPRODISPLAYMEDIUM.OTF */; };
@@ -90,6 +91,7 @@
 		223D6B10CD3C4CEC8FDEC324 /* FontsFree-Net-SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FontsFree-Net-SFProDisplay-Regular.ttf"; path = "../src/assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		25BFB0A13DD541F7B03386EB /* Gilroy-UltraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-UltraLight.ttf"; path = "../src/assets/fonts/Gilroy-UltraLight.ttf"; sourceTree = "<group>"; };
 		2603A987DC894A7C96A829AB /* Gilroy-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Light.otf"; path = "../src/assets/fonts/Gilroy-Light.otf"; sourceTree = "<group>"; };
+		2AC17F6327B9468F000F350D /* BootSplash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BootSplash.storyboard; sourceTree = "<group>"; };
 		2ACD4CBC27AE0C3500CAF6C0 /* ImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageAssets.xcassets; sourceTree = "<group>"; };
 		2ADA422787CC4FFF968C9EBD /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-SemiBold.ttf"; path = "../src/assets/fonts/Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
 		3996224466F04D1980D7428C /* SFPRODISPLAYLIGHTITALIC.OTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SFPRODISPLAYLIGHTITALIC.OTF; path = ../src/assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				2ACD4CBC27AE0C3500CAF6C0 /* ImageAssets.xcassets */,
+				2AC17F6327B9468F000F350D /* BootSplash.storyboard */,
 			);
 			name = Fitnessapp;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				57AD7D604C4043C4961320A5 /* FontsFree-Net-SFProDisplay-Regular.ttf in Resources */,
 				C8643E6F3D99429E8BD737CD /* Gilroy-ExtraBold.otf in Resources */,
 				3675BCF4185C4430B9753BFC /* Gilroy-Light.otf in Resources */,
+				2AC17F6427B9468F000F350D /* BootSplash.storyboard in Resources */,
 				9F71A4D5459E47068D3FB259 /* SFPRODISPLAYBLACKITALIC.OTF in Resources */,
 				4DB617BC4FC949BCA016A709 /* SFPRODISPLAYBOLD.OTF in Resources */,
 				5C535C8DD039433B9164EFC5 /* SFPRODISPLAYHEAVYITALIC.OTF in Resources */,
@@ -670,7 +674,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = MC7XQCZV87;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Fitnessapp/Info.plist;
@@ -678,7 +682,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.10;
+				MARKETING_VERSION = 1.0.14;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -700,14 +704,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = MC7XQCZV87;
 				INFOPLIST_FILE = Fitnessapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.10;
+				MARKETING_VERSION = 1.0.14;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

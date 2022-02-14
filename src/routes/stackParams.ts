@@ -23,6 +23,8 @@ export type StackParamList = {
 
   [SCREENS.HOME_TABS]: undefined
   [SCREENS.MAIN]: undefined
+  [SCREENS.VIDEO_PREPARING]: undefined
+  [SCREENS.WORKOUT_FINISH]: undefined
   [SCREENS.VIDEO]: {
     uri: string
   }

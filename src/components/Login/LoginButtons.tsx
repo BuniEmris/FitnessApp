@@ -5,8 +5,6 @@ import AppleIcon from '@assets/Icons/AppleIcon'
 import { useNavigation } from '@react-navigation/native'
 import { SCREENS } from '@routes/navigations.types'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import { PhoneComponentProps } from '@screens/Auth/LoginScreen'
-import { typography } from '@styles/typography'
 
 type IButtonProps = {
   btnText: string
@@ -24,7 +22,7 @@ const LoginBtns = ({ btnText, mailDesign, icon }: IButtonProps) => {
         if (btnText === 'Войти по E-mail') {
           return navigation.navigate(SCREENS.AUTH_PHONE, { LoginviaEmail: true })
         } else if (btnText === 'БЕСПЛАТНАЯ ПРОБНАЯ ВЕРСИЯ НА 7 ДНЕЙ') {
-          return navigation.navigate(SCREENS.MAIN)
+          return navigation.navigate(SCREENS.HOME_TABS)
         } else {
           return navigation.navigate(SCREENS.AUTH_PHONE)
         }
@@ -73,7 +71,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   smsBtnText: {
-    // fontFamily: typography.medium,
     fontSize: RW(15),
     fontWeight: '600',
     color: 'black',

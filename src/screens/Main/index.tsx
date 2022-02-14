@@ -2,31 +2,20 @@
  * @author GennadySX
  * @created at 2022
  **/
-import { Image, SafeAreaView, ScrollView, Text, View } from 'react-native'
+import { SafeAreaView, ScrollView, View } from 'react-native'
 import React from 'react'
-import { WIDTH } from '@utils/normalizer'
 import { style } from '@screens/Main/styles'
-import { mainScreenMock } from '@mocks/mainScreen.mock'
 import { DateCarousel } from '@screens/Main/components/DateCarousel'
 import { SberCard } from '@screens/Main/components/SberCard'
 import { Spacing } from '@styles/index'
 import { ProductList } from '@screens/Main/components/ProductList'
+import { AccountHeader } from '@screens/Main/components/Header'
 
 export const MainScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView style={style.block}>
-        <View style={style.container}>
-          <View style={{ width: WIDTH - 80 }}>
-            <Text style={style.name}>Привет {mainScreenMock.userName} ✋🏻</Text>
-          </View>
-          <Image
-            source={{
-              uri: mainScreenMock.userAvatar,
-            }}
-            style={style.avatar}
-          />
-        </View>
+        <AccountHeader />
         <DateCarousel />
         <View
           style={{

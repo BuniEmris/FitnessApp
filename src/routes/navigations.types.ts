@@ -26,4 +26,6 @@ export enum SCREENS {
 
   //
   VIDEO = 'Видео',
+  VIDEO_PREPARING = 'Видео загрузка',
+  WORKOUT_FINISH = 'Завершение тренировки',
 }

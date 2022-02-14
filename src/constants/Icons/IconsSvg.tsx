@@ -13,6 +13,7 @@ import forward15secIcon from '@assets/svg/videoPlayerElements/forward15secIcon.s
 import pauseButton from '@assets/svg/videoPlayerElements/pauseButton.svg'
 import playButton from '@assets/svg/videoPlayerElements/playButton.svg'
 import compressButton from '@assets/svg/videoPlayerElements/сompressButton.svg'
+import videoFinishDecor from '@assets/svg/videoFinishDecor.svg'
 
 export type SvgPropsType = {
   style?: SvgStyleType
@@ -29,6 +30,7 @@ export const IconsSVG = {
   compressButton,
   back15secIcon,
   forward15secIcon,
+  videoFinishDecor,
 }
 
 const TabA = ({ style }: SvgPropsType) => (

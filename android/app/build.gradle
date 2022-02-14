@@ -3,8 +3,8 @@ apply plugin: "com.android.application"
 import com.android.build.OutputFile
 
 
-def buildCode = 10
-def buildName = '1.0.10'
+def buildCode = 14
+def buildName = '1.0.14'
 def buildByHermes = true
 def isUniversal = false
 def applicationName = "FitnessApp"
