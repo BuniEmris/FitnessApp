@@ -15,7 +15,7 @@ export default function LoginScreen({}: PhoneComponentProps) {
 
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener(state => {
-      setOnline(state.isConnected)
+      setOnline(!!state?.isConnected)
     })
     // SplashScreen.hide();
     return () => unsubscribe()

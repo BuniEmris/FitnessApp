@@ -4,6 +4,7 @@ import com.facebook.react.ReactActivity;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatDelegate;
 import android.content.Intent;
+import com.zoontek.rnbootsplash.RNBootSplash;
 import android.content.res.Configuration;
 import com.swmansion.reanimated.layoutReanimation.NativeMethodsHolder.*; // RN Reanimated  requirements for RN v66.3
 
@@ -21,6 +22,7 @@ public class MainActivity extends ReactActivity {
   protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
+      RNBootSplash.init(R.drawable.bootsplash, MainActivity.this);
  }
+
 }

@@ -20,6 +20,9 @@ import Calories from '@screens/Auth/Calories'
 import Offer from '@screens/Auth/Offer'
 import RulesDetails from '@screens/Auth/RulesDetails'
 import LoginUserInfo from '@screens/Auth/LoginUserInfo'
+import { VideoPreparingScreen } from '@screens/Workout/screens/VideoPreparing'
+import Video from 'react-native-video'
+import { WorkoutFinishScreen } from '@screens/Workout/screens/WorkoutFinish'
 
 export type ScreenProps = Parameters<typeof Stack['Screen']>[number]
 
@@ -127,6 +130,20 @@ export const RoutesScreens: (ScreenProps & { name: string })[] = [
   {
     name: SCREENS.VIDEO,
     component: VideoScreen,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: SCREENS.VIDEO_PREPARING,
+    component: VideoPreparingScreen,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    name: SCREENS.WORKOUT_FINISH,
+    component: WorkoutFinishScreen,
     options: {
       headerShown: false,
     },

@@ -25,7 +25,7 @@ const LoginBtns = ({ btnText, mailDesign, icon }: IButtonProps) => {
         if (btnText === 'Войти по E-mail') {
           return navigation.navigate(SCREENS.AUTH_PHONE, { LoginviaEmail: true })
         } else if (btnText === 'БЕСПЛАТНАЯ ПРОБНАЯ ВЕРСИЯ НА 7 ДНЕЙ') {
-          return navigation.navigate(SCREENS.MAIN)
+          return navigation.navigate(SCREENS.HOME_TABS)
         } else {
           return navigation.navigate(SCREENS.AUTH_PHONE)
         }
@@ -50,7 +50,7 @@ type IProps = {
 }
 export default function LoginButtons({ offer }: IProps) {
   return (
-    <View style={styles.BtnContainers}>
+    <View style={{}}>
       {offer ? (
         <LoginBtns btnText="БЕСПЛАТНАЯ ПРОБНАЯ ВЕРСИЯ НА 7 ДНЕЙ" mailDesign={false} icon={false} />
       ) : (

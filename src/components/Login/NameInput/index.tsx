@@ -25,7 +25,7 @@ export default function NameInput({
         />
       ) : (
         <TextInput
-          autoCompleteType={'email'}
+          autoComplete={'email'}
           value={userMail}
           onChangeText={val => {
             setUserMail(val)

@@ -25,6 +25,7 @@ import { IconsSVG } from '@constants/Icons/IconsSvg'
 import Orientation from 'react-native-orientation-locker'
 import { isAndroid, isIPhone } from '@utils/platform'
 import { useNavigation } from '@react-navigation/native'
+import { Spacing } from '@styles/index'
 
 const HIDE_CONTROLS_DELAY = 1500
 
@@ -34,7 +35,7 @@ export type VideoComponentProps = {
 }
 
 export type VideoModalProps = {
-  onOpen: (uri: string) => void
+  onOpen: (uri: string, onCloseCallback?: () => void) => void
   onClose: () => void
 }
 export const VideoModal = forwardRef(
@@ -43,6 +44,7 @@ export const VideoModal = forwardRef(
     const hideControlsTimerId = useRef<NodeJS.Timeout | undefined>(undefined)
     const [showControls, setShowControls] = useState<boolean>(false)
     const [isVisible, setVisible] = useState<boolean>(false)
+    const [closeCallback, setCloseCallback] = useState<() => void>(() => {})
     const [url, setUrl] = useState<string>('')
     const [isUserUsingProgressBar, setIsUserUsingProgressBar] = useState<boolean>(false)
     const [state, setState] = useState({
@@ -135,12 +137,13 @@ export const VideoModal = forwardRef(
       videoPlayer.current.seek(0)
     }
 
-    const onOpen = (uri: string) => {
+    const onOpen = (uri: string, onCloseCallback?: () => void) => {
       setUrl(uri)
       Orientation.lockToLandscape()
 
       videoPlayer.current?.presentFullscreenPlayer()
       setVisible(true)
+      onCloseCallback && setCloseCallback(onCloseCallback)
     }
 
     const onClose = () => {
@@ -149,6 +152,7 @@ export const VideoModal = forwardRef(
       }
       Orientation.lockToPortrait()
       setVisible(false)
+      closeCallback && closeCallback()
     }
 
     useImperativeHandle(ref, () => ({
@@ -163,7 +167,7 @@ export const VideoModal = forwardRef(
             <Pressable onPress={onBackdropPressHandler} style={[s.controlsBlock, s.controlOverlay]}>
               <TouchableOpacity
                 activeOpacity={0.6}
-                style={[s.fullScreenBtn, {right: 60, top: 30}]}
+                style={[s.fullScreenBtn, { right: 60, top: 30 }]}
                 hitSlop={hitSlop20}
                 onPress={onClose}>
                 <Svg source={IconsSVG.decompressButton} style={s.fullScreenIcon} />
@@ -215,9 +219,9 @@ export const VideoModal = forwardRef(
 
     if (!isVisible) return <View />
 
-    return (
+    return isAndroid ? (
       <Modal onRequestClose={onClose}>
-        <View style={s.backgroundVideo}>
+        <View style={[s.backgroundVideo]}>
           <Video
             onLoadStart={onLoaStart}
             onLoad={onLoadEnd}
@@ -238,7 +242,13 @@ export const VideoModal = forwardRef(
           )}
 
           {showControls && (
-            <Pressable onPress={onBackdropPressHandler} style={[s.controlsBlock, s.controlOverlay]}>
+            <Pressable
+              onPress={onBackdropPressHandler}
+              style={[
+                s.controlsBlock,
+                s.controlOverlay,
+                { paddingHorizontal: Spacing.SMALL, paddingVertical: Spacing.MEDIUM },
+              ]}>
               <TouchableOpacity
                 activeOpacity={0.6}
                 style={s.fullScreenBtn}
@@ -265,13 +275,74 @@ export const VideoModal = forwardRef(
                 onSlideStart={handlePlayPause}
                 onSlideComplete={handlePlayPause}
                 setIsUserUsingProgressBar={setIsUserUsingProgressBar}
-                style={{ width: HEIGHT, flex: 0 }}
+                style={{ width: HEIGHT - 50, flex: 0 }}
                 onSlideCapture={onSeek}
               />
             </Pressable>
           )}
         </View>
       </Modal>
+    ) : (
+      <View style={[s.backgroundVideo]}>
+        <Video
+          onLoadStart={onLoaStart}
+          onLoad={onLoadEnd}
+          paused={!state.isPlaying}
+          source={{ uri: url }}
+          onTouchStart={onTouched}
+          ref={videoPlayer}
+          style={s.backgroundVideo}
+          resizeMode={'cover'}
+          fullscreen
+          fullscreenOrientation={'landscape'}
+          ignoreSilentSwitch={'ignore'}
+          onProgress={onProgress}
+          onEnd={onEnd}
+        />
+        {!showControls && state.isPreloaderActive && (
+          <Preloader style={{ backgroundColor: 'black' }} spinnerTheme="light" />
+        )}
+
+        {showControls && (
+          <Pressable
+            onPress={onBackdropPressHandler}
+            style={[
+              s.controlsBlock,
+              s.controlOverlay,
+              { paddingHorizontal: Spacing.SMALL, paddingVertical: Spacing.MEDIUM },
+            ]}>
+            <TouchableOpacity
+              activeOpacity={0.6}
+              style={s.fullScreenBtn}
+              hitSlop={hitSlop20}
+              onPress={onClose}>
+              <Svg source={IconsSVG.decompressButton} style={s.fullScreenIcon} />
+            </TouchableOpacity>
+
+            {state.isPreloaderActive ? (
+              <Preloader style={{ backgroundColor: '#111', opacity: 0.8 }} spinnerTheme="light" />
+            ) : (
+              <PlayerControls
+                onPlay={handlePlayPause}
+                onPause={handlePlayPause}
+                playing={state.isPlaying}
+                skipForward={skipForward}
+                skipBackward={skipBackward}
+              />
+            )}
+
+            <ProgressBar
+              currentTime={state.currentTime}
+              duration={state.duration > 0 ? state.duration : 0}
+              onSlideStart={handlePlayPause}
+              onSlideComplete={handlePlayPause}
+              setIsUserUsingProgressBar={setIsUserUsingProgressBar}
+              style={{ width: HEIGHT - 50, flex: 0 }}
+              onSlideCapture={onSeek}
+            />
+          </Pressable>
+        )}
+      </View>
     )
   },
 )
