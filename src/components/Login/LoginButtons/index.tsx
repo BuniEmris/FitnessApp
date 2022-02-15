@@ -50,7 +50,7 @@ type IProps = {
 }
 export default function LoginButtons({ offer }: IProps) {
   return (
-    <View style={{}}>
+    <View style={styles.BtnContainers}>
       {offer ? (
         <LoginBtns btnText="БЕСПЛАТНАЯ ПРОБНАЯ ВЕРСИЯ НА 7 ДНЕЙ" mailDesign={false} icon={false} />
       ) : (

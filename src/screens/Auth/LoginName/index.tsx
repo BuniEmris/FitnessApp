@@ -47,7 +47,7 @@ export default function LoginName({}) {
         style={styles.products}>
         <Products />
       </TouchableOpacity>
-      <ContinueBtn userName={userName} address={ToUserScreen} />
+      <ContinueBtn userInput={userName} onPress={ToUserScreen} />
       {/*    TODO userName для чего ?  dlya disable enable btn */}
     </View>
   )

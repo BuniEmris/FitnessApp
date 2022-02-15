@@ -64,7 +64,7 @@ export default function LoginUserImg({}: PhoneComponentProps) {
             </TouchableOpacity>
           </View>
         </View>
-        <ContinueBtn userName={localFileImg} address={navAddress} />
+        <ContinueBtn userInput={localFileImg} onPress={navAddress} />
       </View>
     </View>
   )

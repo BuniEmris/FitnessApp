@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#000000c0',
     width: '100%',
     alignItems: 'flex-end',
-    justifyContent: 'center',
+    // justifyContent: 'center',
   },
   imageBg: {
     flex: 1,
@@ -28,6 +28,7 @@ export const styles = StyleSheet.create({
     height: RH(100),
     width: RW(360),
     marginRight: RW(10),
+    alignItems: 'center',
   },
   freeText: {
     fontSize: 24,
@@ -39,7 +40,8 @@ export const styles = StyleSheet.create({
   },
   weekTextContainer: {
     width: RW(175),
-    height: RH(35),
+    height: RH(30),
+    // marginTop: RH(10),
     backgroundColor: PRIMARY,
     borderRadius: 5,
     alignItems: 'center',

@@ -32,7 +32,7 @@ export default function LoginPhone({ route, navigation }: any) {
             setActiveBtn={setActiveBtn}
           />
           <View style={styles.devider} />
-          <ContinueBtn  onPress={ToUserScreen} />
+          <ContinueBtn userInput={userMail} onPress={ToUserScreen} />
         </View>
       ) : (
         <View>
