@@ -1,12 +1,13 @@
 import { RH, RW } from '@helpers/Responsive'
 import { PRIMARY } from '@styles/colors'
 import { hasNotch } from '@utils/normalizer'
+import { isAndroid } from '@utils/platform'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000000c0',
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
     width: '100%',
     alignItems: 'flex-end',
     // justifyContent: 'center',
@@ -40,10 +41,13 @@ export const styles = StyleSheet.create({
   },
   weekTextContainer: {
     width: RW(175),
-    height: RH(30),
-    // marginTop: RH(10),
-    backgroundColor: PRIMARY,
-    borderRadius: 5,
+    // height: RH(35),
+    position: 'absolute',
+    top: RH(40),
+    right: 50,
+    justifyContent: 'center',
+    backgroundColor: 'red',
+    borderRadius: isAndroid ? 5 : 5,
     alignItems: 'center',
   },
   weekText: {

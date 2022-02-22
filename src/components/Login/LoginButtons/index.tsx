@@ -13,14 +13,15 @@ type IButtonProps = {
   btnText: string
   mailDesign: boolean
   icon: boolean
+  offer: boolean
 }
 
-const LoginBtns = ({ btnText, mailDesign, icon }: IButtonProps) => {
+const LoginBtns = ({ btnText, mailDesign, icon, offer }: IButtonProps) => {
   const navigation = useNavigation<NativeStackNavigationProp<any>>()
 
   return (
     <TouchableOpacity
-      style={mailDesign ? styles.mailBtn : styles.smsBtn}
+      style={mailDesign ? styles.mailBtn : offer ? styles.offerBtn : styles.smsBtn}
       onPress={() => {
         if (btnText === 'Войти по E-mail') {
           return navigation.navigate(SCREENS.AUTH_PHONE, { LoginviaEmail: true })
@@ -40,7 +41,10 @@ const LoginBtns = ({ btnText, mailDesign, icon }: IButtonProps) => {
           <Text style={mailDesign ? styles.mailBtnText : styles.smsBtnText}>{btnText}</Text>
         </View>
       ) : (
-        <Text style={mailDesign ? styles.mailBtnText : styles.smsBtnText}>{btnText}</Text>
+        <Text
+          style={mailDesign ? styles.mailBtnText : offer ? styles.offerBtnText : styles.smsBtnText}>
+          {btnText}
+        </Text>
       )}
     </TouchableOpacity>
   )
@@ -52,12 +56,17 @@ export default function LoginButtons({ offer }: IProps) {
   return (
     <View style={styles.BtnContainers}>
       {offer ? (
-        <LoginBtns btnText="БЕСПЛАТНАЯ ПРОБНАЯ ВЕРСИЯ НА 7 ДНЕЙ" mailDesign={false} icon={false} />
+        <LoginBtns
+          offer={true}
+          btnText="БЕСПЛАТНАЯ ПРОБНАЯ ВЕРСИЯ НА 7 ДНЕЙ"
+          mailDesign={false}
+          icon={false}
+        />
       ) : (
         <View>
-          <LoginBtns btnText="Войти по SMS" mailDesign={false} icon={false} />
-          <LoginBtns btnText="Войти с помощью Apple" mailDesign={false} icon />
-          <LoginBtns btnText="Войти по E-mail" mailDesign={true} icon />
+          <LoginBtns offer={false} btnText="Войти по SMS" mailDesign={false} icon={false} />
+          <LoginBtns offer={false} btnText="Войти с помощью Apple" mailDesign={false} icon />
+          <LoginBtns offer={false} btnText="Войти по E-mail" mailDesign={true} icon />
         </View>
       )}
     </View>

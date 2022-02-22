@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { View, ImageBackground, StyleSheet, Modal, TouchableOpacity, Text } from 'react-native'
+import { View, ImageBackground, StatusBar, Modal, TouchableOpacity, Text } from 'react-native'
 import { RH, RW } from '@helpers/Responsive'
 import MainText from '@assets/Icons/MainText'
 import LoginButtons from '@components/Login/LoginButtons'
@@ -23,6 +23,7 @@ export default function LoginScreen({}: PhoneComponentProps) {
 
   return (
     <ImageBackground source={Assets.bg} resizeMode="cover" style={styles.imageBg}>
+      <StatusBar animated={true} barStyle={'light-content'} />
       <View style={styles.container}>
         <View style={styles.mainTextContainer}>
           <MainText />

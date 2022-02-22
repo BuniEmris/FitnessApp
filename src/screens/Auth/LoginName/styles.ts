@@ -15,7 +15,16 @@ export const styles = StyleSheet.create({
 
   products: {
     marginTop: RH(160),
-    justifyContent: 'center',
-    alignItems: 'center',
+    width: RW(310),
+    height: RH(42),
+    marginLeft: RW(23),
+  },
+  productsText: {
+    color: '#2F80ED',
+    fontFamily: 'Gilroy',
+    fontSize: 18,
+    lineHeight: RH(21),
+    fontWeight: 'normal',
+    textAlign: 'center',
   },
 })

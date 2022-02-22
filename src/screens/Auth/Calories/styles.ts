@@ -23,7 +23,9 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   bottomTxt: {
-    marginVertical: RH(30),
+    height: RH(236),
+    width: RW(355),
+    // marginVertical: RH(30),
     justifyContent: 'center',
     alignItems: 'center',
   },

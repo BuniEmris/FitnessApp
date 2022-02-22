@@ -27,7 +27,7 @@ export default function LoginUserInfo({}) {
 
   return (
     <View style={styles.container}>
-      <HeaderName color={true} />
+      <HeaderName color={false} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.intro}>
           <UserIntro />

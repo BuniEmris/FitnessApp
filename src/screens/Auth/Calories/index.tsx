@@ -22,7 +22,7 @@ export default function Calories({}: PhoneComponentProps) {
         <CaloryMain />
       </View>
       <MySwitchSelector calory={true} />
-      <View style={{ marginVertical: 32 }}>
+      <View>
         <ActivityLevel calory={true} />
       </View>
       <View style={styles.bottomTxt}>

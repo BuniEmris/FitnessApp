@@ -36,22 +36,31 @@ export default function UserInfoBtn({
         bottomSheet.current?.show()
       }}
       style={styles.container}>
-      <Text style={styles.name}>{name}</Text>
+      <View>
+        <Text style={styles.name}>{name}</Text>
+      </View>
       <View
         style={{
           flexDirection: 'row',
           alignItems: 'center',
-          justifyContent: 'center',
-          height: RH(85),
         }}>
-        {textValue ? (
-          <Text style={styles.name}>{textValue}</Text>
-        ) : (
-          <Text style={styles.value}>
-            {value}
-            {sm ? <Text style={styles.sm}>{kg ? 'kg' : 'см'}</Text> : <View />}
-          </Text>
-        )}
+        <View
+          style={{
+            width: RW(140),
+            height: RH(75),
+            alignItems: 'flex-end',
+            justifyContent: 'center',
+            marginRight: RW(22),
+          }}>
+          {textValue ? (
+            <Text style={styles.name}>{textValue}</Text>
+          ) : (
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={styles.value}>{value}</Text>
+              {sm && <Text style={styles.sm}>{kg ? 'kg' : 'см'}</Text>}
+            </View>
+          )}
+        </View>
         <NextIcon />
       </View>
     </TouchableOpacity>

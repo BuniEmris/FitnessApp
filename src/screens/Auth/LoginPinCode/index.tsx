@@ -1,8 +1,6 @@
-import { View, Text, StyleSheet } from 'react-native'
-import React, { useState, useRef } from 'react'
-import { RH, RW } from '@helpers/Responsive'
+import { View, Text } from 'react-native'
+import React, { useState, useRef, useEffect } from 'react'
 import GoBackBtn from '@ui/Buttons/GoBackBtn'
-import PhoneNo from '@assets/Icons/PhoneText'
 import MailText from '@assets/Icons/MailText'
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input'
 import SendSms from '@components/Login/SendSms'
@@ -12,6 +10,7 @@ import { useNavigation } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
 import { styles } from './styles'
 import { hasNotch } from '@utils/normalizer'
+import VirtualKeyboard from '@components/VirtualKeyboard'
 export default function LoginPinCode({ route }: any) {
   const navigation = useNavigation<StackNavigationProp<any, any>>()
 
@@ -27,6 +26,13 @@ export default function LoginPinCode({ route }: any) {
       setShowErrorPin(true)
     }
   }
+  useEffect(() => {
+    if (pincodeValue === '1111') {
+      handleNextStep()
+    } else if (pincodeValue.length === 4 && pincodeValue !== '1111') {
+      setShowErrorPin(true)
+    }
+  }, [pincodeValue])
   return (
     <View style={styles.container}>
       <View style={{ marginTop: hasNotch ? 40 : 20 }}>
@@ -38,22 +44,30 @@ export default function LoginPinCode({ route }: any) {
       ) : (
         <View>
           <Text style={styles.enterPhoneTxt}>Мы отправили вам СМС код</Text>
-          <PhoneNo />
+          <View style={styles.details}>
+            <Text style={styles.detailsText}>To the number:</Text>
+            <Text style={styles.phoneText}> + 7 (978) 048-65-77</Text>
+          </View>
         </View>
       )}
 
       <View style={styles.pinContainer}>
         <SmoothPinCodeInput
           ref={pinRef}
+          // placeholder="0"
+          codeLength={4}
           value={pincodeValue}
           onTextChange={(val: any) => setPincodeValue(val)}
-          cellStyle={styles.inputContainer}
+          cellStyle={showErrorPin ? styles.WrongInputContainer : styles.inputContainer}
           textStyle={styles.inputText}
           onFulfill={handlingCode}
-          autoFocus
+          cellStyleFocused={null}
         />
       </View>
-      {showErrorPin && <ValidationText />}
+      <View style={styles.validationText}>
+        {showErrorPin ? <ValidationText /> : <Text style={styles.empty}></Text>}
+      </View>
+      <VirtualKeyboard phoneInput={pincodeValue} setPhoneInput={setPincodeValue} phone={false} />
       <SendSms showErrorPin={showErrorPin} setShowErrorPin={setShowErrorPin} />
     </View>
   )

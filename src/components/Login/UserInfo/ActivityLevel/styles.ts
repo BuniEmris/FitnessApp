@@ -4,14 +4,21 @@ const borderWidth = 4
 export const styles = StyleSheet.create({
   container: {
     width: RW(360),
-    height: RH(260),
+    height: RH(250),
     borderRadius: 25,
     backgroundColor: '#EFF7F9',
-    // backgroundColor: ' #EFF7F9',
+    alignItems: 'center',
+  },
+  caloryContainer: {
+    width: RW(360),
+    height: RH(210),
+    borderRadius: 25,
+    backgroundColor: '#EFF7F9',
+    marginTop: 30,
     alignItems: 'center',
   },
   headerText: {
-    marginTop: RH(20),
+    marginTop: RH(15),
     width: RW(219),
     height: RH(75),
     fontSize: 20,
@@ -79,8 +86,7 @@ export const styles = StyleSheet.create({
     width: RW(236),
     marginLeft: 10,
     marginRight: 10,
-    // alignItems: 'stretch',
-    justifyContent: 'center',
+    // justifyContent: 'center',
   },
   activeMark: {
     borderColor: '#FA5C01',

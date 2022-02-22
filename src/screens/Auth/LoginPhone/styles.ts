@@ -10,7 +10,22 @@ export const styles = StyleSheet.create({
   },
 
   docsBtn: {
-    marginTop: RH(50),
+    marginTop: RH(30),
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  docsMainText: {
+    fontFamily: 'Gilroy',
+    fontWeight: 'normal',
+    color: '#828282',
+    fontSize: 16,
+    lineHeight: RH(18),
+  },
+  docsBtnText: {
+    color: '#565FFF',
+    fontWeight: '400',
+    fontSize: 16,
+    lineHeight: RH(18),
   },
   devider: {
     marginTop: RH(200),

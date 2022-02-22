@@ -14,7 +14,7 @@ export default function ActivityLevel({ calory }: IProps) {
   console.log(level, 'sss')
   const trackData = [1, 2, 3]
   return (
-    <View style={styles.container}>
+    <View style={calory ? styles.caloryContainer : styles.container}>
       <Text style={styles.headerText}>
         {calory ? 'Выбери сам, передвигая ползунок' : 'Увровень физической нагрузки'}
       </Text>
@@ -83,7 +83,6 @@ export default function ActivityLevel({ calory }: IProps) {
             minimumTrackTintColor="#FA5C01"
             maximumValue={4}
             minimumValue={0}
-            // step={1}
             value={level}
             onValueChange={value => setLevel(value)}
           />

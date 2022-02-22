@@ -1,6 +1,7 @@
 import { View } from 'react-native'
 import React, { useState } from 'react'
 import SwitchSelector from 'react-native-switch-selector'
+import { styles } from './styles'
 
 type Iprops = {
   calory: boolean
@@ -15,7 +16,8 @@ export default function MySwitchSelector({ calory }: Iprops) {
         <SwitchSelector
           initial={0}
           onPress={(value: any) => setMyCalory(value)}
-          textColor={'black'} //'#7a44cf'
+          textStyle={styles.textStyle}
+          selectedTextStyle={styles.selectedTextStyle}
           selectedColor={'white'}
           buttonColor={'#FA5C01'}
           borderColor="transparent"
@@ -32,7 +34,9 @@ export default function MySwitchSelector({ calory }: Iprops) {
         <SwitchSelector
           initial={0}
           onPress={(value: any) => setGender(value)}
-          textColor={'black'} //'#7a44cf'
+          //'#7a44cf'
+          textStyle={styles.textStyle}
+          selectedTextStyle={styles.selectedTextStyle}
           selectedColor={'white'}
           buttonColor={'#FA5C01'}
           borderColor="transparent"

@@ -11,7 +11,23 @@ export const styles = StyleSheet.create({
   },
   intro: {
     marginTop: RH(25),
-    marginBottom: RH(5),
+    marginBottom: RH(10),
+  },
+  introText: {
+    color: '#828282',
+    fontWeight: 'normal',
+    fontFamily: 'Gilroy',
+    fontSize: 20,
+    lineHeight: RH(23),
+  },
+  introSelectText: {
+    width: RW(364),
+    height: RH(65),
+    color: '#333333',
+    fontSize: 25,
+    lineHeight: RH(31),
+    fontWeight: 'bold',
+    marginBottom: 25,
   },
   btn: {
     width: RW(287),

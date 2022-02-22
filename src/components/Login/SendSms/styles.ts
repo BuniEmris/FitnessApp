@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
   SmsContainer: {
     alignItems: 'center',
-    marginTop: RH(328),
+    marginTop: 40,
   },
   smsText: {
     color: '#828282',

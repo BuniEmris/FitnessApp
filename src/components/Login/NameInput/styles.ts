@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   input: {
+    fontFamily: 'Gilroy',
     fontSize: RH(24),
     color: '#333333',
     fontWeight: '600',

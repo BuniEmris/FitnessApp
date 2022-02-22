@@ -1,11 +1,9 @@
-import { View, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
-import SelectMultiple from 'react-native-select-multiple'
-import { styles } from './styles'
-import { PhoneComponentProps } from '@screens/Auth/LoginScreen'
-import { Assets } from '@constants/Icons/Assets'
-
-const products = [
+import BouncyCheckbox from 'react-native-bouncy-checkbox'
+import { pickersStyles } from './styles'
+import { shadows } from '@styles/shadows'
+const DATA = [
   'Коровье молоко',
   'Куриное яйцо',
   'Арахис',
@@ -16,26 +14,42 @@ const products = [
   'Орехи букового дерева',
   'Каштаны',
 ]
-export default function SelectAllergicList({}: PhoneComponentProps) {
-  const [selectedProducts, setSelectedProducts] = useState([])
-  const onSelectionsChange = (val: any) => {
-    setSelectedProducts(val)
-  }
+type Props = {
+  selected: string
+  setSelected: React.Dispatch<React.SetStateAction<string>>
+}
+const SelectAllergicList = ({ selected, setSelected }: Props) => {
+  console.log(selected)
+
+  const data = DATA
   return (
-    <View>
-      <SelectMultiple
-        style={styles.container}
-        rowStyle={styles.row}
-        selectedCheckboxStyle={styles.selectedCheckboxStyle}
-        // checkboxStyle={styles.checkboxStyle}
-        items={products}
-        checkboxSource={Assets.unselected}
-        selectedCheckboxSource={Assets.selected}
-        selectedItems={selectedProducts}
-        onSelectionsChange={onSelectionsChange}
-        labelStyle={styles.labelStyle}
-        selectedLabelStyle={styles.selectedLabelStyle}
-      />
-    </View>
+    <ScrollView>
+      {data?.map((item, index) => (
+        <TouchableOpacity onPress={() => setSelected(item)} key={index + selected}>
+          <View style={pickersStyles.row}>
+            <Text
+              style={selected === item ? pickersStyles.selectTextActive : pickersStyles.selectText}>
+              {item}
+            </Text>
+            <BouncyCheckbox
+              isChecked={selected === item}
+              size={20}
+              fillColor="#FA5C01"
+              unfillColor="#FFFFFF"
+              iconStyle={{
+                borderColor: 'rgba(250, 92, 1, 0.5)',
+                borderWidth: 2,
+              }}
+              textStyle={{ fontFamily: 'Gilroy' }}
+              onPress={(isChecked: boolean) => {
+                setSelected(item)
+              }}
+            />
+          </View>
+        </TouchableOpacity>
+      ))}
+    </ScrollView>
   )
 }
+
+export default SelectAllergicList

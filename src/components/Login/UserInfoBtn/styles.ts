@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: RW(360),
+    width: RW(355),
     height: RH(75),
     marginTop: RH(30),
     backgroundColor: '#EFF7F9',
@@ -17,23 +17,23 @@ export const styles = StyleSheet.create({
   },
   name: {
     fontSize: RW(20),
-    lineHeight: RH(23),
+    // lineHeight: RH(24),
     color: '#333333',
-    fontWeight: '500',
-    marginRight: RW(22),
+    fontWeight: '600',
   },
   value: {
-    fontSize: RW(26),
+    fontFamily: 'Gilroy',
+    fontSize: RW(36),
+    lineHeight: RH(44),
     color: '#333333',
-    fontWeight: 'bold',
+    fontWeight: '500',
     marginLeft: RW(81),
-    marginRight: RW(22),
   },
   sm: {
     fontSize: RW(20),
     lineHeight: RH(24),
     color: '#333333',
     fontWeight: '500',
-    marginBottom: RH(30),
+    marginLeft: 10,
   },
 })

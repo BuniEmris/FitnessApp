@@ -4,9 +4,8 @@ import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
   container: {
     width: RW(311),
-    height: RH(33),
-    marginLeft: RW(35),
-    marginTop: RH(44),
+    // marginLeft: RW(35),
+    // marginTop: RH(44),
   },
   text: {
     fontSize: 14,
@@ -21,14 +20,16 @@ export const styles = StyleSheet.create({
     fontWeight: '400',
     lineHeight: RH(23),
     alignItems: 'center',
+    fontFamily: 'Gilroy',
   },
   enterPhoneTxt: {
+    fontFamily: 'Gilroy',
     marginTop: RH(10),
     width: RW(358),
     height: RH(72),
     fontSize: RW(30),
     fontWeight: 'bold',
-    lineHeight: RH(35),
+    lineHeight: RH(36),
     color: '#333333',
   },
 })
