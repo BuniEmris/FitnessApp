@@ -28,7 +28,7 @@ export const WorkoutFinishScreen = () => {
   const [nVal, setNVal] = useState<number>(1)
 
   const onNavigateToWorkout = () => {
-    navigation.popToTop()
+    navigation.pop(2)
   }
 
   return (

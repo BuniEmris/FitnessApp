@@ -39,6 +39,7 @@ export const styles = StyleSheet.create({
   },
   itemDayActive: {
     color: Colors.WHITE,
+    fontWeight: 'bold'
   },
   dot: {
     marginLeft: 10,
