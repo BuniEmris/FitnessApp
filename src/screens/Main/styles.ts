@@ -21,6 +21,7 @@ export const style = StyleSheet.create({
   name: {
     ...typography.medium,
     fontSize: 18,
+    fontWeight: '600',
     color: Colors.GRAY,
   },
   avatar: {
@@ -38,6 +39,6 @@ export const style = StyleSheet.create({
   },
   dateTitle: {
     paddingLeft: 15,
-    color: Colors.PRIMARY,
+    color: Colors.PRIMARY_DARKER,
   },
 })

@@ -12,7 +12,7 @@ export const _style = StyleSheet.create({
   block: {
     width: '100%',
     backgroundColor: Colors.WHITE,
-    marginBottom: Spacing.MEDIUM,
+    marginBottom: Spacing.MEDIUM_PLUS,
     ...shadows.normal,
     flexDirection: 'row',
     borderRadius: 25,
@@ -20,7 +20,7 @@ export const _style = StyleSheet.create({
     paddingHorizontal: Spacing.MEDIUM,
     paddingRight: Spacing.TINY,
     alignItems: 'center',
-    elevation: 15,
+    elevation: 10,
   },
   infoContainer: {
     width: '65%',
